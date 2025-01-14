@@ -17,11 +17,11 @@ export default function Events() {
     return (
         <>
             <div className="bg-[#189D90] text-center font-lato">
-                <div className="text-white font-bold text-2xl md:text-4xl xl:text-5xl py-10">
+                <div className="text-white font-bold text-2xl md:text-3xl xl:text-4xl py-10">
                     Bringing our mission to life
                 </div>
                 {/* Grid container */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 py-6 md:p-10 xl:p-20">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 xl:gap-8 px-4 py-6 md:p-10 xl:p-20">
                     {images.map((img, index) => (
                         <div key={index} className="w-full">
                             <img
@@ -34,7 +34,7 @@ export default function Events() {
                 </div>
             </div>
             <div className='text-center bg-[#E1EFF5]'>
-                <div className='text-[#ED6636]  font-bold py-10 text-3xl md:text-4xl xl:text-5xl'>Videos</div>
+                <div className='text-[#ED6636] font-bold py-10 text-2xl md:text-3xl xl:text-4xl'>Videos</div>
                 <div className='p-2 md:p-10 xl:p-20 py-10 flex flex-col justify-center'>
                     <video className='xl:h-[580px] w-auto' controls>
                         <source src={TridalaEvent} type="video/mp4" />

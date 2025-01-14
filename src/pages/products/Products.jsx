@@ -83,7 +83,7 @@ export default function Products() {
         <div className="bg-[#E1EFF5] md:h-10 xl:h-20"></div>
         <div className="bg-[#179C8E]">
           <div className="flex justify-center py-5 md:py-10 xl:py-20">
-            <div className="text-white font-bold text-2xl md:text-4xl xl:text-6xl">
+            <div className="text-white font-bold text-2xl md:text-3xl xl:text-5xl">
               OUR PRODUCTS
             </div>
           </div>
@@ -96,8 +96,8 @@ export default function Products() {
                   type="button"
                 >
                   <div className='flex flex-col items-start'>
-                    <div className='font-bold text-xl md:text-2xl xl:text-3xl'>{item.name}</div>
-                    <div className='font-thin text-l md:text-xl xl:text-2xl text-justify max-w-[800px]'>{item.desc}</div>
+                    <div className='font-bold text-lg md:text-xl xl:text-2xl'>{item.name}</div>
+                    <div className='font-thin text-sm md:text-lg xl:text-xl text-justify max-w-[800px]'>{item.desc}</div>
                   </div>
                 </button>
                 <div
@@ -106,12 +106,13 @@ export default function Products() {
                   }`}
                 >
                   <div className="relative mx-auto mt-4">
-                    <img src={item.img} className='xl:h-[600px] xl:w-fit' alt="" />
+                    <img src={item.img} className='xl:h-[500px] xl:w-fit' alt="" />
                   </div>
                 </div>
               </div>
             ))}
           </div>
+          <div className='h-40 md:h-52 xl:h-64'></div>
         </div>
       </div>
     </>

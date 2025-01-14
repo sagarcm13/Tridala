@@ -6,28 +6,28 @@ import image5 from './../../assets/ourStory/image5.png';
 const OurStory = () => {
     return (
         <div className="bg-[#189D90] font-lato p-6 flex flex-col md:items-start md:flex-row md:justify-around xl:p-16">
-            <div className="text-justify md:w-[70%]">
-                <div className="text-3xl md:text-6xl xl:text-9xl font-bold " style={{ color: 'transparent', WebkitTextStroke: '1px #fff' }}>OUR</div>
-                <div className=" text-3xl md:text-6xl xl:text-9xl font-extrabold text-orange-500">STORY</div>
+            <div className="text-justify md:w-[70%] p-5 xl:p-10">
+                <div className="text-3xl md:text-6xl xl:text-9xl font-bold text-[#E47A4E]">OUR</div>
+                <div className=" text-3xl md:text-6xl xl:text-9xl font-extrabold text-[#E47A4E]">STORY</div>
                 <div className="mt-8 space-y-6">
                     <div className="flex md:items-start justify-center items-center">
-                        <div className="h-[900px] md:h-[1000px] xl:h-[720px] w-1 bg-white"></div>
+                        <div className="h-[900px] md:h-[1000px] xl:h-[730px] w-4 bg-white"></div>
                         <div className='space-y-8'>
                             <div className='flex items-center space-x-1'>
-                                <div className="w-24 md:w-40 xl:w-[420px] h-1 bg-white"></div>
-                                <div className="text-white text-sm md:text-xl xl:text-2xl">Kemparaju. K was born into a farming family in Cheemasandra village, located near Bengaluru city. He completed his education at a government school and developed a long-term vision to contribute to society through a multidisciplinary approach. He began his career as a small entrepreneur across various fields, achieving success through his dedication, discipline, and devotion.</div>
+                                <div className="w-24 md:w-40 xl:w-[420px] h-0.5 bg-white"></div>
+                                <div className="text-white text-sm md:text-xl xl:text-2xl leading-tight md:leading-tight xl:leading-tight">Kemparaju. K was born into a farming family in Cheemasandra village, located near Bengaluru city. He completed his education at a government school and developed a long-term vision to contribute to society through a multidisciplinary approach. He began his career as a small entrepreneur across various fields, achieving success through his dedication, discipline, and devotion.</div>
                             </div>
                             <div className='flex items-center space-x-1'>
-                                <div className="w-24 md:w-40 xl:w-[700px] h-1 bg-white"></div>
-                                <div className="text-white text-sm md:text-xl xl:text-2xl">His commitment to social service led him to enter the political arena. As he progressed from Gram Panchayat to the State Assembly, he encountered significant gaps in education, healthcare, rural development, and sanitation. Over the past 20 years, Kemparaju. K has played a pivotal role in modernizing numerous schools and hospitals to meet contemporary challenges and leverage available technology. He has expressed tremendous satisfaction in enhancing rural development through the improvement of infrastructure, including roads, drainage systems, drinking water supply, and various other amenities.</div>
+                                <div className="w-24 md:w-40 xl:w-[700px] h-0.5 bg-white"></div>
+                                <div className="text-white text-sm md:text-xl xl:text-2xl leading-tight md:leading-tight xl:leading-tight">His commitment to social service led him to enter the political arena. As he progressed from Gram Panchayat to the State Assembly, he encountered significant gaps in education, healthcare, rural development, and sanitation. Over the past 20 years, Kemparaju. K has played a pivotal role in modernizing numerous schools and hospitals to meet contemporary challenges and leverage available technology. He has expressed tremendous satisfaction in enhancing rural development through the improvement of infrastructure, including roads, drainage systems, drinking water supply, and various other amenities.</div>
                             </div>
                             <div className='flex items-center space-x-1'>
-                                <div className="w-24 md:w-40 xl:w-[650px] h-1 bg-white"></div>
-                                <div className="text-white text-sm md:text-xl xl:text-2xl">The global impact of the COVID-19 pandemic highlighted the critical shortcomings in the availability, accessibility, and affordability of healthcare. Kemparju. K focused on comprehensive rural development. This initiative has provided ambulance services and assistance to over 35,000 families. Additionally, he has extended support to bereaved individuals and provided food kits to more than 100,000 daily-wage families for nearly three months through a well-established trust “Swami Vivekananda Foundation” which was established by Kempraju K in 2015</div>
+                                <div className="w-24 md:w-40 xl:w-[650px] h-0.5 bg-white"></div>
+                                <div className="text-white text-sm md:text-xl xl:text-2xl leading-tight md:leading-tight xl:leading-tight">The global impact of the COVID-19 pandemic highlighted the critical shortcomings in the availability, accessibility, and affordability of healthcare. Kemparju. K focused on comprehensive rural development. This initiative has provided ambulance services and assistance to over 35,000 families. Additionally, he has extended support to bereaved individuals and provided food kits to more than 100,000 daily-wage families for nearly three months through a well-established trust “Swami Vivekananda Foundation” which was established by Kempraju K in 2015</div>
                             </div>
                             <div className='flex items-center space-x-1'>
-                                <div className="w-24 md:w-40 xl:w-[550px] h-1 bg-white"></div>
-                                <div className="text-white text-sm md:text-xl xl:text-2xl">Recognizing that the community needed more than just food assistance, he and his family—serving as the board of directors—established a framework of Trusted, Revolutionary, Innovative, Defined Affordability in collaboration with a league of esteemed pharmaceutical and medical practitioners. This initiative aims to ensure the community has access to a wide range of affordable medicines, thereby addressing a critical need within the community.</div>
+                                <div className="w-24 md:w-40 xl:w-[550px] h-0.5 bg-white"></div>
+                                <div className="text-white text-sm md:text-xl xl:text-2xl leading-tight md:leading-tight xl:leading-tight">Recognizing that the community needed more than just food assistance, he and his family—serving as the board of directors—established a framework of Trusted, Revolutionary, Innovative, Defined Affordability in collaboration with a league of esteemed pharmaceutical and medical practitioners. This initiative aims to ensure the community has access to a wide range of affordable medicines, thereby addressing a critical need within the community.</div>
                             </div>
                         </div>
                     </div>

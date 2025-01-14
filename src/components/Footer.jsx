@@ -30,7 +30,7 @@ const Footer = () => {
 const CompanyResource = () => {
   return (
     <>
-      <div className="flex space-x-16 md:space-x-8 xl:space-x-16">
+      <div className="flex space-x-16 md:space-x-8 xl:space-x-16 md:mt-16 mx-2">
         <div className="mb-8 md:mb-0">
           <h2 className="font-bold mb-4">Company</h2>
           <ul className='space-y-2'>
@@ -57,7 +57,7 @@ const FormHelper = () => {
   return (
     <>
       <div className="flex flex-col md:w-1/3 ">
-        <h2 className="font-semibold my-4 md:mb-4 md:mt-0">Contact Us</h2>
+        <h2 className="font-semibold my-4 md:mb-4 md:mt-16">Contact Us</h2>
         <Forms />
       </div>
     </>

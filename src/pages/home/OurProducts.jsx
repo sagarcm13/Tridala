@@ -2,18 +2,22 @@
 import { useState, useEffect } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-import image1 from "./../../assets/homeProducts/BilfenaLogo.svg"
-import image2 from "./../../assets/homeProducts/NewPantriLogo.svg"
-import image3 from "./../../assets/homeProducts/OSELTRA75.svg"
-import image4 from "./../../assets/homeProducts/PREGABILNT.svg"
-import image5 from "./../../assets/homeProducts/ROARVITwithMolecule.svg"
-import image6 from "./../../assets/homeProducts/TrilevLogo.svg"
-import image7 from "./../../assets/homeProducts/Tritussplusv16.svg"
+import image1 from "./../../assets/homeProducts/img1.svg"
+import image2 from "./../../assets/homeProducts/img2.svg"
+import image3 from "./../../assets/homeProducts/img3.svg"
+import image4 from "./../../assets/homeProducts/img4.svg"
+import image5 from "./../../assets/homeProducts/img5.svg"
+import image6 from "./../../assets/homeProducts/img6.svg"
+import image7 from "./../../assets/homeProducts/img7.svg"
+import image9 from "./../../assets/homeProducts/img9.svg"
+import image10 from "./../../assets/homeProducts/img10.svg"
+import { useNavigate } from "react-router-dom";
 
 export default function OurProducts() {
-    const images = [image1, image2, image3, image4, image5, image6, image7];
+    const images = [image1, image2, image3, image4, image5, image6, image7, image9, image10];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [visibleSlides, setVisibleSlides] = useState(1);
+    let navigate = useNavigate();
 
     // Update visible slides based on screen size
     useEffect(() => {
@@ -66,13 +70,12 @@ export default function OurProducts() {
                     {images.map((image, index) => (
                         <div
                             key={index}
-                            className={`flex-shrink-0 flex justify-center w-full px-6 ${visibleSlides === 2 ? "md:w-1/2" : ""
-                                } ${visibleSlides === 3 ? "xl:w-1/3" : ""} `}
+                            className={`flex-shrink-0 flex justify-center w-full px-6`}
                         >
-                            <img
+                            <img onClick={() => { navigate('Products'); }}
                                 src={image}
                                 alt={`Slide ${index + 1}`}
-                                className={`w-60 md:w-80 xl:w-[450px] h-auto  ${index === 1 ? "xl:w-[4]" : ""}`}
+                                className={`w-64 h-auto cursor-pointer`}
                             />
                         </div>
                     ))}
@@ -93,6 +96,7 @@ export default function OurProducts() {
 }
 const ImageSlider2 = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    let navigate = useNavigate();
 
     const handleNextSlide = () => {
         if (currentIndex < images.length - 2) {
@@ -126,10 +130,10 @@ const ImageSlider2 = ({ images }) => {
                 >
                     {images.map((image, index) => (
                         <div key={index} className="w-1/2 flex-shrink-0 p-2">
-                            <img
+                            <img onClick={() => { navigate('Products'); }}
                                 src={image}
                                 alt={`Slide ${index + 1}`}
-                                className="w-96 h-40 rounded-lg"
+                                className="w-96 h-44 rounded-lg cursor-pointer"
                             />
                         </div>
                     ))}
@@ -150,6 +154,7 @@ const ImageSlider2 = ({ images }) => {
 };
 const ThreeImageSlider = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    let navigate = useNavigate();
 
     const handleNextSlide = () => {
         if (currentIndex < images.length - 3) {
@@ -168,36 +173,45 @@ const ThreeImageSlider = ({ images }) => {
             {/* Previous Button */}
             <button
                 onClick={handlePrevSlide}
-                className={`xl:left-0 top-1/2 transform -translate-y-1/2 rounded-full z-10 ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
-                    }`}
+                className={`absolute left-2 top-1/2 transform -translate-y-1/2 rounded-full z-10 ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
                 disabled={currentIndex === 0}
             >
                 <IoIosArrowBack size={80} />
             </button>
 
             {/* Slider Container */}
-            <div className="flex overflow-hidden relative w-full">
+            <div className="flex overflow-hidden relative w-full mx-16">
                 <div
                     className="flex transition-transform duration-300"
                     style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
                 >
-                    {images.map((image, index) => (
-                        <div key={index} className="w-1/3 flex-shrink-0 p-2">
-                            <img
-                                src={image}
-                                alt={`Slide ${index + 1}`}
-                                className={`w-[500px] h-60 rounded-lg `}
-                            />
-                        </div>
-                    ))}
+                    {images.map((image, index) => {
+                        const isCenter = index === currentIndex + 1; // Center image logic
+                        return (
+                            <div
+                                key={index}
+                                className={`w-1/3 flex-shrink-0 p-2 transition-all duration-300 ${isCenter ? "scale-125 z-10" : "scale-90"
+                                    }`}
+                                style={{
+                                    transformOrigin: "center center",
+                                }}
+                            >
+                                <img
+                                    onClick={() => navigate("Products")}
+                                    src={image}
+                                    alt={`Slide ${index + 1}`}
+                                    className={`w-full h-52 rounded-lg cursor-pointer`}
+                                />
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
 
             {/* Next Button */}
             <button
                 onClick={handleNextSlide}
-                className={`xl:right-0 top-1/2 transform -translate-y-1/2  rounded-full z-10 ${currentIndex >= images.length - 3 ? "opacity-50 cursor-not-allowed" : ""
-                    }`}
+                className={`absolute right-2 top-1/2 transform -translate-y-1/2 rounded-full z-10 ${currentIndex >= images.length - 3 ? "opacity-50 cursor-not-allowed" : ""}`}
                 disabled={currentIndex >= images.length - 3}
             >
                 <IoIosArrowForward size={80} />
