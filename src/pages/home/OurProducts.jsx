@@ -14,7 +14,7 @@ import image10 from "./../../assets/homeProducts/img10.svg"
 import { useNavigate } from "react-router-dom";
 
 export default function OurProducts() {
-    const images = [image1, image2, image3, image4, image5, image6, image7, image9, image10];
+    const images = [image5, image9, image3, image4, image1, image6, image7, image2, image10];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [visibleSlides, setVisibleSlides] = useState(1);
     let navigate = useNavigate();
@@ -173,7 +173,7 @@ const ThreeImageSlider = ({ images }) => {
             {/* Previous Button */}
             <button
                 onClick={handlePrevSlide}
-                className={`absolute left-2 top-1/2 transform -translate-y-1/2 rounded-full z-10 ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
+                className={`absolute left-2 color-[#005239] top-1/2 transform -translate-y-1/2 rounded-full z-10 ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
                 disabled={currentIndex === 0}
             >
                 <IoIosArrowBack size={80} />
@@ -200,7 +200,7 @@ const ThreeImageSlider = ({ images }) => {
                                     onClick={() => navigate("Products")}
                                     src={image}
                                     alt={`Slide ${index + 1}`}
-                                    className={`w-full h-52 rounded-lg cursor-pointer`}
+                                    className={`rounded-lg cursor-pointer ${isCenter ? "w-[600px] h-56" : "w-[500px] h-52 opacity-70"}`}
                                 />
                             </div>
                         );

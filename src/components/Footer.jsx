@@ -34,18 +34,18 @@ const CompanyResource = () => {
         <div className="mb-8 md:mb-0">
           <h2 className="font-bold mb-4">Company</h2>
           <ul className='space-y-2'>
-            <li><Link to="/about" className="hover:underline">About Us</Link></li>
-            <li><Link to="/team" className="hover:underline">Team</Link></li>
-            <li><Link to="/journey" className="hover:underline">Journey</Link></li>
-            <li><Link to="/purpose" className="hover:underline">Purpose</Link></li>
+            <li><Link to="/Team" className="hover:underline font-semibold">About Us</Link></li>
+            <li><Link to="/Team" className="hover:underline font-semibold">Team</Link></li>
+            <li><Link to="/Purpose" className="hover:underline font-semibold">Journey</Link></li>
+            <li><Link to="/Purpose" className="hover:underline font-semibold">Purpose</Link></li>
           </ul>
         </div>
         <div>
           <h2 className="font-bold mb-4">Resources</h2>
           <ul className='space-y-2'>
-            <li><Link to="/products" className="hover:underline">Products</Link></li>
-            <li><Link to="/newsletter" className="hover:underline">Newsletter</Link></li>
-            <li><Link to="/health" className="hover:underline">Health Tips</Link></li>
+            <li><Link to="/Products" className="hover:underline font-semibold">Products</Link></li>
+            <li><Link to="/Events" className="hover:underline font-semibold">Newsletter</Link></li>
+            <li><Link to="/HealthTips" className="hover:underline font-semibold">Health Tips</Link></li>
           </ul>
         </div>
       </div>
@@ -67,14 +67,16 @@ const Address = () => {
   return (
     <>
       <div className="mb-8 md:mb-0 flex flex-col md:none md: items-center md:items-start">
-        <img src={logo} alt="Tridala Logo" className="w-40 mb-4 bg-white m-2 px-6 py-2 rounded-full" />
+        <img src={logo} alt="Tridala Logo" className="w-40 mb-4 bg-white m-2 px-10 py-2 rounded-full" />
         <div>
           <address className="not-italic mb-4">
             Tridala Pharmaceuticals Pvt. Ltd. <br />
             Sakura Complex, 3rd Floor No. 2M-317, NGEF Layout East <br />
             Kasturi Nagar Main Road, Bengaluru - 560 043, Karnataka.
           </address>
-          <a href="mailto:info@tridalapharma.com" className="block mb-2">info@tridalapharma.com</a>
+          <a href="mailto:order@tridalapharma.com" className="block mb-2">For order: order@tridalapharma.com</a>
+          <a href="mailto:hr@tridalapharma.com" className="block mb-2">Job application: hr@tridalapharma.com</a>
+          <a href="mailto:info@tridalapharma.com" className="block mb-2">Any quires: info@tridalapharma.com</a>
           <a href="tel:+91808813599">+91 80881 13599</a>
         </div>
       </div>

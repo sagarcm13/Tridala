@@ -1,7 +1,7 @@
 export const exerciseData = [
     {
         "name": "Stretching Routine",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ivC7eOfEbARDrlnW9q5AtTbjSP359VxqXA&s",
+        "img": "https://img.livestrong.com/375/clsd/getty/8b5c5a37437e4388849904e8c2b697e0.jpg",
         "todo": [
             "Neck Stretch: 10 seconds each side",
             "Shoulder Rolls: 10 forward, 10 backward",
@@ -26,7 +26,7 @@ export const exerciseData = [
     },
     {
         "name": "Core Activation",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT02tQ7L_Tuh4b5YmVishlKjvMJevmOFuGfww&s",
+        "img": "https://s3assets.skimble.com/assets/4733/skimble-workout-trainer-exercise-seated-leg-raises-1_iphone.jpg",
         "todo": [
             "Plank: Hold for 10 seconds",
             "Seated Leg Lifts: 5 reps per leg"
@@ -38,7 +38,7 @@ export const exerciseData = [
     },
     {
         "name": "Lower Body Focus",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx4wcdL9c2XOJLtFLQXoUdAx2G7zSx8UKc0Q&s",
+        "img": "https://static.thcdn.com/images/v2/wp-content/uploads/sites/478/2016/08/28024856/how-to-grow-your-calves-3.jpg?width=700",
         "todo": [
             "Standing Calf Raises: 10 reps",
             "Side Leg Lifts: 5 reps per leg"
@@ -312,7 +312,7 @@ export const exerciseData = [
     },
     {
         "name": "Flexibility & Balance",
-        "img": "https://www.running4women.com/wp-content/uploads/2018/01/7ad625b55c6d0dc1b5ee7eaf679801c1.jpg",
+        "img": "https://www.lifemark.ca/document/users/guillaume.morissette%40lifemark.ca/blog_forwardstretch03.jpg",
         "todo": [
             "Forward Bend Stretch: 10 seconds",
             "Single-Leg Balance: 15 seconds per leg"
@@ -359,5 +359,17 @@ export const exerciseData = [
             "Boosts overall fitness",
             "Engages multiple muscle groups"
         ]
-    }
+    },
+    {
+        "name": "Lower Body Focus",
+        "img": "https://sunnyhealthfitness.com/cdn/shop/articles/Killer-Lower-Body-Leg-Glute-Focused-Bodyweight-Workout.jpg?v=1621443148",
+        "todo": [
+            "Standing Side Kicks: 5 reps per leg",
+            "Hamstring Curls (standing): 5 reps per leg"
+        ],
+        "benefits": [
+            "Targets thigh and glute muscles",
+            "Strengthens hamstrings for stability"
+        ]
+    },
 ]

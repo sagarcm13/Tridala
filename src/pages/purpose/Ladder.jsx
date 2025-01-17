@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import logo from './../../assets/logo.png';
 import "./Ladder.css";
 
@@ -14,6 +14,8 @@ const Ladder = () => {
     ];
 
     const [spacing, setSpacing] = useState({ top: 30, right: 15 });
+    const [visibleSteps, setVisibleSteps] = useState(Array(ladder.length).fill(false));
+    const stepsRef = useRef([]);
 
     useEffect(() => {
         const updateSpacing = () => {
@@ -25,6 +27,25 @@ const Ladder = () => {
 
         updateSpacing();
         window.addEventListener('resize', updateSpacing);
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const index = stepsRef.current.indexOf(entry.target);
+                        setVisibleSteps((prev) => {
+                            const updated = [...prev];
+                            updated[index] = true;
+                            return updated;
+                        });
+                    }
+                });
+            },
+            { threshold: 0.5 } // trigger when 50% of the element is in the viewport
+        );
+
+        stepsRef.current.forEach((step) => observer.observe(step));
+
         return () => window.removeEventListener('resize', updateSpacing);
     }, []);
 
@@ -42,14 +63,18 @@ const Ladder = () => {
                         the highest standards of quality, safety & efficacy.
                     </div>
                     {/* Staircase Design */}
-                    <div className="md:relative flex flex-col md:w-[50%] space-y-2 md:space-y-0 items-center md:items-end md:justify-center p-5 mt-5">
+                    <div className="md:relative flex flex-col md:w-[50%] space-y-[1px] md:space-y-0 items-center md:items-end md:justify-center p-5 md:mt-5">
                         {ladder.map((step, index) => (
                             <div
                                 key={index}
-                                className={`md:absolute w-full max-w-[250px] md:max-w-[350px] md:h-12 xl:max-w-[450px] xl:h-16 bg-gradient-to-r ${step.color} flex justify-center md:px-5 xl:px-8 md:justify-start items-center text-white text-center font-bold rounded-lg md:rounded-xl shadow-xl border-2 md:text-2xl xl:text-4xl`}
+                                ref={(el) => stepsRef.current[index] = el}
+                                className={`md:absolute w-full max-w-[250px] md:max-w-[350px] md:h-12 xl:max-w-[450px] xl:h-16 bg-gradient-to-r ${step.color} flex justify-center md:px-5 xl:px-8 md:justify-start items-center text-white text-center font-bold rounded-lg md:rounded-xl shadow-xl border-[1px] md:border-2 md:text-2xl xl:text-4xl`}
                                 style={{
                                     top: `${index * spacing.top}px`,
                                     right: `${index * spacing.right}px`,
+                                    opacity: visibleSteps[index] ? 1 : 0,
+                                    transform: visibleSteps[index] ? 'translateX(0)' : 'translateX(100%)',
+                                    transition: `transform 0.5s ease-out, opacity 0.5s ease-out ${index * 0.5}s`,
                                 }}
                             >
                                 {step.text}

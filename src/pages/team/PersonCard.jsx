@@ -10,7 +10,7 @@ const PersonCard = ({ person }) => {
   };
 
   return (
-    <div className="card-container relative h-36 w-48 md:w-auto md:h-60 xl:h-[350px]">
+    <div className="card-container relative h-36 w-48 md:w-auto md:h-60 xl:h-[350px]" onMouseEnter={handleToggle} onMouseLeave={handleToggle}>
       <div
         className={`card-inner ${isVisible ? "flipped" : ""}`}
         onClick={handleToggle}

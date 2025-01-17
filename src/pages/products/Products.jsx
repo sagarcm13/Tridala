@@ -89,10 +89,10 @@ export default function Products() {
           </div>
           <div className='flex flex-col  items-center'>
             {products.map((item, index) => (
-              <div key={index} className="py-5 border-b-2 w-[70%]">
+              <div key={index} className={`py-5 w-[70%] ${item.collapsed?"border-b-2":""} `}>
                 <button
                   onClick={() => toggleCollapse(index)}
-                  className="rounded-md py-2 px-4 border border-transparent text-center text-sm text-white transition-all hover:shadow-lg disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  className="rounded-md py-2 px-4 border border-transparent bg-[#1ab1a2] text-center text-sm text-white transition-all hover:shadow-lg disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
                 >
                   <div className='flex flex-col items-start'>
@@ -101,12 +101,12 @@ export default function Products() {
                   </div>
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
                     item.collapsed ? "max-h-0 opacity-0" : "h-auto opacity-100"
                   }`}
                 >
                   <div className="relative mx-auto mt-4">
-                    <img src={item.img} className='xl:h-[500px] xl:w-fit' alt="" />
+                    <img src={item.img} className={`xl:h-[500px] xl:w-fit ${item.collapsed?"":"border-b-2 py-5"} `} alt="" />
                   </div>
                 </div>
               </div>

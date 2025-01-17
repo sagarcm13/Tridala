@@ -3,7 +3,18 @@ import image2 from './../../assets/ourStory/image2.png';
 import image3 from './../../assets/ourStory/image3.png';
 import image4 from './../../assets/ourStory/image4.png';
 import image5 from './../../assets/ourStory/image5.png';
+import { useRef, useEffect, useState } from "react";
+
 const OurStory = () => {
+    const divRef = useRef(null); // Create a ref
+    const [height, setHeight] = useState(0);
+
+    useEffect(() => {
+        if (divRef.current) {
+            setHeight(divRef.current.offsetHeight);
+        }
+        console.log(height);
+    }, [height]);
     return (
         <div className="bg-[#189D90] font-lato p-6 flex flex-col md:items-start md:flex-row md:justify-around xl:p-16">
             <div className="text-justify md:w-[70%] p-5 xl:p-10">
@@ -11,8 +22,8 @@ const OurStory = () => {
                 <div className=" text-3xl md:text-6xl xl:text-9xl font-extrabold text-[#E47A4E]">STORY</div>
                 <div className="mt-8 space-y-6">
                     <div className="flex md:items-start justify-center items-center">
-                        <div className="h-[900px] md:h-[1000px] xl:h-[730px] w-4 bg-white"></div>
-                        <div className='space-y-8'>
+                        <div className={`w-4 bg-white`} style={{ height: `${height}px` }}></div>
+                        <div className='space-y-8' ref={divRef}>
                             <div className='flex items-center space-x-1'>
                                 <div className="w-24 md:w-40 xl:w-[420px] h-0.5 bg-white"></div>
                                 <div className="text-white text-sm md:text-xl xl:text-2xl leading-tight md:leading-tight xl:leading-tight">Kemparaju. K was born into a farming family in Cheemasandra village, located near Bengaluru city. He completed his education at a government school and developed a long-term vision to contribute to society through a multidisciplinary approach. He began his career as a small entrepreneur across various fields, achieving success through his dedication, discipline, and devotion.</div>

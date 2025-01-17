@@ -105,8 +105,8 @@ export default function Team() {
           <img src={teamPoster} className='w-full' alt="founder image" />
         </div>
         <div className="flex flex-col text-center space-y-3 md:space-y-10 xl:space-y-15 m-5 md:m-10 xl:m-15">
-          <div className='text-[#218275] text-2xl md:text-4xl xl:text-5xl font-bold my-20'>MEET OUR TEAM</div>
-          <div className="text-xl font-bold md:text-3xl xl:text-4xl my-10 md:my-16 xl:my-20">Our Founder</div>
+          <div className='text-[#218275] text-2xl md:text-5xl xl:text-7xl font-bold my-20'>MEET OUR TEAM</div>
+          <div className="text-xl font-semibold md:text-3xl xl:text-5xl my-10 md:my-16 xl:my-20">Our Founder</div>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center md:justify-around space-y-10 md:space-y-0 md:space-x-10 xl:space-x-20 p-5 md:p-10 xl:mx-28">
           <img
@@ -114,18 +114,18 @@ export default function Team() {
             src={founder}
             alt="Profile"
           />
-          <div className="text-[#218275] text-center md:text-left text-sm font-medium md:text-xl xl:text-3xl space-y-4">
+          <div className="text-[#218275] text-center md:text-left text-sm font-medium md:text-xl xl:text-3xl xl:leading-10 space-y-4 xl:space-y-8">
             <div className="text-justify xl:leading-10 ">
               Kemparju. K was born into a farming family. He completed his education at a government school and developed a long-term vision to contribute to society through a multidisciplinary approach. He began his career as a small entrepreneur across various fields, achieving success through his dedication, discipline, and devotion.
             </div>
-            <div className="text-justify leading-10 ">
+            <div className="text-justify xl:leading-10 ">
               His commitment to social service led him to enter the political arena. He realised that the community needed accessibility to affordable healthcare. And decided to establish a framework of Trusted, Revolutionary, Innovative, and Defined Affordability in collaboration with a league of esteemed pharmaceutical and medical practitioners. That was when Tridala Pharmaceutical was born.
             </div>
           </div>
         </div>
 
         <div className='flex justify-center p-5 md:p-10  my-10 md:my-16 xl:my-20'>
-          <div className='text-3xl xl:text-4xl font-bold'>Board of Directors</div>
+          <div className='text-3xl xl:text-5xl font-semibold'>Board of Directors</div>
         </div>
         <div className="flex flex-col md:flex-row justify-center md:space-x-28 xl:space-x-40 items-center space-y-2 md:space-y-0 p-2 md:py-10">
           {personsRow1.map((person) => {
@@ -138,15 +138,15 @@ export default function Team() {
           })}
         </div>
         <div className='flex flex-col text-center items-center justify-center py-5 pt-10 md:pt-16 xl:pt-20 pb-24'>
-          <div className='text-3xl xl:text-4xl font-bold py-10 md:py-16 xl:py-24 '>Advisory Team</div>
-          <div className='flex flex-col md:flex-row flex-wrap justify-center space-y-4 md:space-y-0 md:space-x-4 xl:space-x-16'>
+          <div className='text-3xl xl:text-5xl font-semibold py-10 md:py-16 xl:py-24 '>Advisory Team</div>
+          <div className='flex flex-col md:flex-row flex-wrap justify-center space-y-4 md:space-y-0 md:space-x-4 xl:space-x-6'>
             {advisoryTeam.map((item, index) => (
               <div
                 key={index}
                 className={`flex flex-col bg-[#3DAAA5E3] rounded-3xl w-52 md:w-52 xl:w-80 md:h-[550px] xl:h-[700px] mx-2 ${index === 0 ? 'mt-0' : 'mt-2'
                   }`}
               >
-                <img src={item.img} className='h-52 md:h-64 xl:h-[400px]' alt="" />
+                <img src={item.img} className='h-52 md:h-64 xl:h-[350px]' alt="" />
                 <div className='text-white font-bold mt-2 md:text-xl xl:text-2xl'>{item.name}</div>
                 <div className='mt-2 md:text-sm xl:text-lg'>{item.role}</div>
                 <div className='md:h-44 xl:h-48'>

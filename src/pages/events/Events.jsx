@@ -9,7 +9,7 @@ import img11 from './../../assets/Website/img11.JPG';
 import img12 from './../../assets/Website/img12.JPG';
 import img13 from './../../assets/Website/img13.jpg';
 import img15 from './../../assets/Website/img15.JPG';
-import img16 from './../../assets/Website/img16.JPG';
+import img16 from './../../assets/Website/img16.png';
 import TridalaEvent from './../../assets/Website/TridalaEvent.mp4'
 
 export default function Events() {
@@ -21,11 +21,11 @@ export default function Events() {
                     Bringing our mission to life
                 </div>
                 {/* Grid container */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 xl:gap-8 px-4 py-6 md:p-10 xl:p-20">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 xl:gap-8 px-4 py-6 md:p-10 xl:p-20">
                     {images.map((img, index) => (
                         <div key={index} className="w-full">
                             <img
-                                className="w-full h-52 md:h-64 xl:h-72 object-cover rounded-xl"
+                                className="w-full h-48 md:h-64 xl:h-72 object-fill rounded-xl"
                                 src={img}
                                 alt={`Image ${index + 1}`}
                             />
@@ -39,10 +39,6 @@ export default function Events() {
                     <video className='xl:h-[580px] w-auto' controls>
                         <source src={TridalaEvent} type="video/mp4" />
                     </video>
-                    <div className='flex flex-col text-start md:space-y-5 py-5 md:py-10'>
-                        <div className='md:text-xl xl:text-2xl'>20.11.2024</div>
-                        <div className='font-medium md:text-xl xl:text-2xl'>In 1992, Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, laudantium eius fuga dolorem minus aperiam maiores et quam optio molestias.</div>
-                    </div>
                 </div>
             </div>
         </>
