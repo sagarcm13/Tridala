@@ -11,13 +11,15 @@ const Footer = () => {
         <div className='border-t-2 border-b-2 pb-4'>
           <SocialMedia />
         </div>
-        <div className='flex justify-center items-center'>
-          <CompanyResource />
+        <div className='flex justify-around'>
+          <Company />
+          <Resource />
         </div>
       </div>
       <div className="hidden container mx-auto md:flex flex-col md:flex-row justify-between border-b-[1px] pb-4">
         <Address />
-        <CompanyResource />
+        <Company />
+        <Resource />
         <FormHelper />
       </div>
       <div className='hidden md:block'>
@@ -26,26 +28,44 @@ const Footer = () => {
     </footer>
   );
 }
-const CompanyResource = () => {
+const Company = () => {
   return (
     <>
-      <div className="flex space-x-16 md:space-x-8 xl:space-x-16 md:mt-16 mx-2">
-        <div className="mb-8 md:mb-0">
-          <h2 className="font-bold mb-4">Company</h2>
-          <ul className='space-y-2 text-sm'>
-            <li><Link to="/Team" className="hover:underline font-semibold">About Us</Link></li>
-            <li><Link to="/Team" className="hover:underline font-semibold">Team</Link></li>
-            <li><Link to="/Purpose" className="hover:underline font-semibold">Journey</Link></li>
-            <li><Link to="/Purpose" className="hover:underline font-semibold">Purpose</Link></li>
-          </ul>
+      <div className='md:mt-16'>
+        <h2 className="font-bold mb-4">Company</h2>
+        <div className="space-y-2 text-sm">
+          <div>
+            <Link to="/Team" className="hover:underline font-medium">About Us</Link>
+          </div>
+          <div>
+            <Link to="/Team" className="hover:underline font-medium">Team</Link>
+          </div>
+          <div>
+            <Link to="/Purpose" className="hover:underline font-medium">Journey</Link>
+          </div>
+          <div>
+            <Link to="/Purpose" className="hover:underline font-medium">Purpose</Link>
+          </div>
         </div>
-        <div>
-          <h2 className="font-bold mb-4">Resources</h2>
-          <ul className='space-y-2 text-sm'>
-            <li><Link to="/Products" className="hover:underline font-semibold">Products</Link></li>
-            <li><Link to="/Events" className="hover:underline font-semibold">Newsletter</Link></li>
-            <li><Link to="/HealthTips" className="hover:underline font-semibold">Health Tips</Link></li>
-          </ul>
+      </div>
+    </>
+  )
+}
+const Resource = () => {
+  return (
+    <>
+      <div className='md:mt-16'>
+        <h2 className="font-bold mb-4">Resources</h2>
+        <div className="space-y-2 text-sm">
+          <div>
+            <Link to="/Products" className="hover:underline font-medium">Products</Link>
+          </div>
+          <div>
+            <Link to="/Events" className="hover:underline font-medium">Newsletter</Link>
+          </div>
+          <div>
+            <Link to="/HealthTips" className="hover:underline font-medium">Health Tips</Link>
+          </div>
         </div>
       </div>
     </>

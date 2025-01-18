@@ -14,7 +14,7 @@ const Ladder = () => {
     ];
 
     const [spacing, setSpacing] = useState({ top: 30, right: 15 });
-    const [visibleSteps, setVisibleSteps] = useState(Array(ladder.length).fill(false));
+    // const [visibleSteps, setVisibleSteps] = useState(Array(ladder.length).fill(false));
     const stepsRef = useRef([]);
 
     useEffect(() => {

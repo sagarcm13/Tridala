@@ -114,7 +114,7 @@ export default function Team() {
             src={founder}
             alt="Profile"
           />
-          <div className="text-[#189D90] text-center md:text-left text-sm font-medium md:text-xl xl:text-2xl xl:leading-10 space-y-4 xl:space-y-8">
+          <div className="text-[#189D90] text-center md:text-left text-sm font-medium md:text-xl xl:text-2xl xl:leading-10 space-y-4 xl:space-y-6">
             <div className="text-justify xl:leading-10 ">
               Kemparju. K was born into a farming family. He completed his education at a government school and developed a long-term vision to contribute to society through a multidisciplinary approach. He began his career as a small entrepreneur across various fields, achieving success through his dedication, discipline, and devotion.
             </div>
@@ -143,7 +143,7 @@ export default function Team() {
             {advisoryTeam.map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-col bg-[#3DAAA5E3] rounded-3xl w-52 md:w-52 xl:w-80 h-[470px] md:h-[550px] xl:h-[700px] mx-2 ${index === 0 ? 'mt-0' : 'mt-2'
+                className={`flex flex-col bg-[#3DAAA5E3] rounded-3xl w-52 md:w-52 xl:w-80 h-[450px] md:h-[500px] xl:h-[650px] mx-2 ${index === 0 ? 'mt-0' : 'mt-2'
                   }`}
               >
                 <img src={item.img} className='h-52 md:h-64 xl:h-[350px]' alt="" />
@@ -152,12 +152,12 @@ export default function Team() {
                 <div className='md:h-44 xl:h-48'>
                   <div className='text-justify text-sm md:text-l xl:text-xl text-white p-2'>{item.description}</div>
                 </div>
-                <div className="flex justify-center space-x-6 xl:space-x-8 pb-2  md:text-xl xl:text-2xl">
+                {/* <div className=" flex justify-center space-x-6 xl:space-x-8 pb-2  md:text-xl xl:text-2xl">
                   <a href={item.x} className="text-white hover:text-gray-200"><i className="fab fa-x-twitter"></i></a>
                   <a href={item.instagram} className="text-white hover:text-gray-200"><i className="fab fa-instagram"></i></a>
                   <a href={item.facebook} className="text-white hover:text-gray-200"><i className="fab fa-facebook"></i></a>
                   <a href={item.linkedin} className="text-white hover:text-gray-200"><i className="fab fa-linkedin"></i></a>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>

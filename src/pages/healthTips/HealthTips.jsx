@@ -4,16 +4,24 @@ import exercise from './../../assets/healthTips/exercise.png';
 import poster from './../../assets/HealthTipsPoster.svg';
 import { fruitsData } from './../../constants/fruitsData';
 import { exerciseData } from './../../constants/exerciseData';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 export default function HealthTips() {
   const [index, setIndex] = useState(new Date().getDate());
   const [isFruit, setIsFruit] = useState(true);
   const [boxContent, setBoxContent] = useState("");
+  const divRef = useRef(null);
+  const [Width, setWidth] = useState(0);
+
+  useEffect(() => {
+    if (divRef.current) {
+      setWidth(divRef.current.offsetWidth);
+    }
+  }, [Width]);
   useEffect(() => {
     if (isFruit) {
-      let content = (<div className="bg-[#36A899C4] text-white rounded-2xl shadow md:p-4 xl:p-8 flex flex-col md:flex-row items-center md:items-start xl:mx-48">
+      let content = (<div className={`bg-[#36A899C4] text-white rounded-2xl shadow md:p-4 xl:p-8 flex flex-col md:flex-row items-center md:items-start w-[${Width}px]`}>
         <div className="lg:w-1/2 m-4 lg:mb-0">
-          <h3 className="text-xl md:text-2xl xl:text-4xl font-bold mb-4 md:mx-10">Fruit of the day: {fruitsData[index].name}</h3>
+          <h3 className="text-xl md:text-2xl xl:text-4xl font-bold mb-4 xl:mx-10">Fruit of the day: {fruitsData[index].name}</h3>
           <ul className="list-disc list-inside text-lg md:text-xl xl:text-2xl xl:py-5 xl:px-8">
             <li>Nutritional Values ({fruitsData[index].nutritionalValues.weight}):</li>
             <li>Calories: {fruitsData[index].nutritionalValues.calories}</li>
@@ -26,7 +34,6 @@ export default function HealthTips() {
                 ))}
               </ul>
             </li>
-
           </ul>
         </div>
         <div className="md:w-1/2 flex justify-center items-center">
@@ -39,9 +46,9 @@ export default function HealthTips() {
       </div>);
       setBoxContent(content);
     } else {
-      let content = (<div className="bg-[#36A899C4] text-white rounded-2xl shadow md:p-4 xl:p-8 flex flex-col md:flex-row items-center md:items-start xl:mx-48">
+      let content = (<div className={`bg-[#36A899C4] text-white rounded-2xl shadow md:p-4 xl:p-8 flex flex-col md:flex-row items-center md:items-start w-[${Width}px]`}>
         <div className="lg:w-1/2 m-4 lg:mb-0">
-          <h3 className="text-xl md:text-2xl xl:text-4xl font-bold mb-4 md:mx-10">Exercise of the day: {exerciseData[index].name}</h3>
+          <h3 className="text-xl md:text-2xl xl:text-4xl font-bold mb-4 xl:mx-10">Exercise of the day: {exerciseData[index].name}</h3>
           <ul className="list-disc text-lg md:text-xl px-4 xl:text-2xl xl:py-5 xl:px-8">
             {exerciseData[index].todo.map((item, ind) => (<><li key={ind}>{item}</li></>))}
           </ul>
@@ -62,65 +69,68 @@ export default function HealthTips() {
       </div>);
       setBoxContent(content);
     }
-  }, [index, isFruit]);
+  }, [index, isFruit, Width]);
 
   return (
     <>
       <img src={poster} className='w-full' alt="" />
       <div className="font-lato bg-[#E1EFF5] p-8 xl:p-16">
-        <div className='bg-[#E1EFF5]  flex flex-col md:flex-row items-center justify-around xl:mx-40 my-10 space-y-4 md:space-y -0'>
-          <div className="bg-white rounded-2xl shadow p-6 w-72 h-68 xl:w-[400px]">
-            <h2 className="text-xl font-bold text-center mb-4 xl:mb-8">
-              30 Days Challenge
-            </h2>
-            <div className="grid grid-cols-7 gap-2 xl:gap-4 text-center text-sm font-semibold text-gray-600">
-              {[...Array(31)].map((_, i) => (
-                <button key={i} onClick={() => setIndex(i)}>
-                  <div
-                    className={`p-1 xl:p-2 md:w-10 xl:h-10 flex items-center justify-center ${i === index
-                      ? "bg-[#22c2b2] text-white rounded-full"
-                      : "hover:bg-gray-200 rounded"
-                      }`}
-                  >
-                    {i + 1}
-                  </div>
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className={`relative ${isFruit ? `bg-[#88F0E2]` : `bg-white`} rounded-2xl shadow p-6 w-52 h-52 xl:h-[300px] xl:w-[300px] flex flex-col items-center m-2 md:m-4 xl:m-8 `}>
-            <div className="absolute top-0 right-0 rotate-180">
-              <img src={leaves} alt="Decorative Leaves" />
-            </div>
-            <button onClick={() => setIsFruit(true)}>
-              <div className="bg-[#23C5B5] p-4 h-32 w-32 xl:h-56 xl:w-56 rounded-full flex items-center justify-center">
-                <img src={apple} className="p-2" alt="Apple Icon" />
+        <div className='bg-[#E1EFF5]  flex-col items-center justify-between xl:mx-40 my-10 space-y-4 md:space-y-0' ref={divRef}>
+          <div className='flex flex-col md:flex-row items-center justify-between my-10 space-y-4 md:space-y-0'>
+            <div className="bg-white rounded-2xl shadow p-6 w-72 h-68 xl:w-[400px]">
+              <h2 className="text-xl font-bold text-center mb-4 xl:mb-8">
+                30 Days Challenge
+              </h2>
+              <div className="grid grid-cols-7 gap-2 xl:gap-4 text-center text-sm font-semibold text-gray-600">
+                {[...Array(31)].map((_, i) => (
+                  <button key={i} onClick={() => setIndex(i)}>
+                    <div
+                      className={`p-1 xl:p-2 md:w-10 xl:h-10 flex items-center justify-center ${i === index
+                        ? "bg-[#22c2b2] text-white rounded-full"
+                        : "hover:bg-gray-200 rounded"
+                        }`}
+                    >
+                      {i + 1}
+                    </div>
+                  </button>
+                ))}
               </div>
-              <h3 className="mt-4 text-lg font-bold">NUTRITION</h3>
-            </button>
-            <div className="absolute left-0 bottom-0">
-              <img src={leaves} alt="Decorative Leaves" />
             </div>
-          </div>
-
-          {/* Exercise Card */}
-          <div className={`relative ${isFruit ? `bg-white` : `bg-[#88F0E2]`} rounded-2xl shadow p-6 w-52 h-52 xl:h-[300px] xl:w-[300px] flex flex-col items-center m-2 md:m-4 xl:m-8`}>
-            <div className="absolute top-0 left-0 rotate-90">
-              <img src={leaves} alt="Decorative Leaves" />
-            </div>
-            <button onClick={() => setIsFruit(false)}>
-              <div className="h-36 w-36 xl:h-60 xl:w-56 rounded-full flex items-center justify-center">
-                <img src={exercise} alt="Exercise Icon" />
+            <div className={`relative ${isFruit ? `bg-[#88F0E2]` : `bg-white`} rounded-2xl shadow p-6 w-52 h-52 xl:h-[300px] xl:w-[300px] flex flex-col items-center`}>
+              <div className="absolute top-0 right-0 rotate-180">
+                <img src={leaves} alt="Decorative Leaves" />
               </div>
-              <h3 className="text-lg font-bold">Exercise</h3>
-            </button>
-            <div className="absolute right-0 bottom-0 -rotate-90">
-              <img src={leaves} alt="Decorative Leaves" />
+              <button onClick={() => setIsFruit(true)}>
+                <div className="bg-[#23C5B5] p-4 h-32 w-32 xl:h-56 xl:w-56 rounded-full flex items-center justify-center">
+                  <img src={apple} className="p-2" alt="Apple Icon" />
+                </div>
+                <h3 className="mt-4 text-lg font-bold">NUTRITION</h3>
+              </button>
+              <div className="absolute left-0 bottom-0">
+                <img src={leaves} alt="Decorative Leaves" />
+              </div>
+            </div>
+
+            {/* Exercise Card */}
+            <div className={`relative ${isFruit ? `bg-white` : `bg-[#88F0E2]`} rounded-2xl shadow p-6 w-52 h-52 xl:h-[300px] xl:w-[300px] flex flex-col items-center`}>
+              <div className="absolute top-0 left-0 rotate-90">
+                <img src={leaves} alt="Decorative Leaves" />
+              </div>
+              <button onClick={() => setIsFruit(false)}>
+                <div className="h-36 w-36 xl:h-60 xl:w-56 rounded-full flex items-center justify-center">
+                  <img src={exercise} alt="Exercise Icon" />
+                </div>
+                <h3 className="text-lg font-bold">Exercise</h3>
+              </button>
+              <div className="absolute right-0 bottom-0 -rotate-90">
+                <img src={leaves} alt="Decorative Leaves" />
+              </div>
             </div>
           </div>
-
+          <div>
+            {boxContent}
+          </div>
         </div>
-        {boxContent}
       </div>
     </>
   );

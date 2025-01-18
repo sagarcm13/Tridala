@@ -3,18 +3,18 @@ import { useState, useEffect } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import image1 from "./../../assets/homeProducts/img1.svg"
-import img2 from "./../../assets/homeProducts/img2.png"
+import img2 from "./../../assets/homeProducts/img2B.png"
 import image3 from "./../../assets/homeProducts/img3.svg"
 import imag from "./../../assets/homeProducts/img.png"
+import imagt from "./../../assets/homeProducts/triagel.png"
 import image5 from "./../../assets/homeProducts/img5.svg"
-import image6 from "./../../assets/homeProducts/img6.svg"
-import img7 from "./../../assets/homeProducts/img7.png"
+import roar from "./../../assets/homeProducts/roar.png"
 import image9 from "./../../assets/homeProducts/img9.svg"
 import image10 from "./../../assets/homeProducts/img10.svg"
 import { useNavigate } from "react-router-dom";
 
 export default function OurProducts() {
-    const images = [image5, image9, image3, imag, image1, image6, img7, img2, image10];
+    const images = [image5, image9, image3, imag,roar, image1,  imagt, img2, image10];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [visibleSlides, setVisibleSlides] = useState(1);
     let navigate = useNavigate();

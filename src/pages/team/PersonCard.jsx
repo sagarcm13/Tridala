@@ -30,7 +30,7 @@ const PersonCard = ({ person }) => {
             <p className="description">
               {person.description}
             </p>
-            <div className="social-links space-x-8">
+            <div className="hidden social-links space-x-8">
               <a href={person.x} target="_blank" rel="noreferrer">
                 <i className="fab fa-x-twitter"></i>
               </a>

@@ -13,17 +13,16 @@ const OurStory = () => {
         if (divRef.current) {
             setHeight(divRef.current.offsetHeight);
         }
-        console.log(height);
     }, [height]);
     return (
         <div className="bg-[#189D90] font-lato p-6 flex flex-col md:items-start md:flex-row md:justify-around xl:p-16">
             <div className="text-justify md:w-[70%] p-5 xl:p-10">
                 <div className="text-3xl md:text-6xl xl:text-9xl font-bold text-[#E47A4E]">OUR</div>
-                <div className=" text-3xl md:text-6xl xl:text-9xl font-bold text-[#E47A4E]">STORY</div>
-                <div className="mt-8 space-y-6">
+                <div className="text-3xl md:text-6xl xl:text-9xl font-bold text-[#E47A4E]">STORY</div>
+                <div className="space-y-6 ml-4 xl:ml-10">
                     <div className="flex md:items-start justify-center items-center">
-                        <div className={`w-4 bg-white`} style={{ height: `${height-20}px` }}></div>
-                        <div className='space-y-8' ref={divRef}>
+                        <div className={`w-4 bg-white`} style={{ height: `${height-10}px` }}></div>
+                        <div className='space-y-4 md:space-y-8 mt-14 md:mt-8 xl:mt-10' ref={divRef}>
                             <div className='flex items-center space-x-1'>
                                 <div className="w-24 md:w-40 xl:w-[420px] h-0.5 bg-white"></div>
                                 <div className="text-white text-sm md:text-xl xl:text-2xl leading-tight md:leading-tight xl:leading-tight">Kemparaju. K was born into a farming family in Cheemasandra village, located near Bengaluru city. He completed his education at a government school and developed a long-term vision to contribute to society through a multidisciplinary approach. He began his career as a small entrepreneur across various fields, achieving success through his dedication, discipline, and devotion.</div>
