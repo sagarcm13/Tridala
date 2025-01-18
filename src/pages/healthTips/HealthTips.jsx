@@ -1,7 +1,7 @@
 import leaves from './../../assets/healthTips/leaves.svg';
 import apple from './../../assets/healthTips/apple.png';
 import exercise from './../../assets/healthTips/exercise.png';
-import poster from './../../assets/healthTipsPoster.png';
+import poster from './../../assets/HealthTipsPoster.svg';
 import { fruitsData } from './../../constants/fruitsData';
 import { exerciseData } from './../../constants/exerciseData';
 import { useState, useEffect } from 'react';
@@ -88,12 +88,12 @@ export default function HealthTips() {
               ))}
             </div>
           </div>
-          <div className={`relative ${isFruit?"bg-[#88F0E2]":"bg-white"} bg-white rounded-2xl shadow p-6 w-60 h-60 xl:h-[350px] xl:w-[350px] flex flex-col items-center m-2 md:m-4 xl:m-8 `}>
+          <div className={`relative ${isFruit ? `bg-[#88F0E2]` : `bg-white`} rounded-2xl shadow p-6 w-52 h-52 xl:h-[300px] xl:w-[300px] flex flex-col items-center m-2 md:m-4 xl:m-8 `}>
             <div className="absolute top-0 right-0 rotate-180">
               <img src={leaves} alt="Decorative Leaves" />
             </div>
             <button onClick={() => setIsFruit(true)}>
-              <div className="bg-[#23C5B5] p-4 h-36 w-36 xl:h-60 xl:w-60 rounded-full flex items-center justify-center">
+              <div className="bg-[#23C5B5] p-4 h-32 w-32 xl:h-56 xl:w-56 rounded-full flex items-center justify-center">
                 <img src={apple} className="p-2" alt="Apple Icon" />
               </div>
               <h3 className="mt-4 text-lg font-bold">NUTRITION</h3>
@@ -104,15 +104,15 @@ export default function HealthTips() {
           </div>
 
           {/* Exercise Card */}
-          <div className={`relative ${isFruit?"bg-white":"bg-[#88F0E2]"} rounded-2xl shadow p-6 w-60 h-60 xl:h-[350px] xl:w-[350px] flex flex-col items-center m-2 md:m-4 xl:m-8`}>
+          <div className={`relative ${isFruit ? `bg-white` : `bg-[#88F0E2]`} rounded-2xl shadow p-6 w-52 h-52 xl:h-[300px] xl:w-[300px] flex flex-col items-center m-2 md:m-4 xl:m-8`}>
             <div className="absolute top-0 left-0 rotate-90">
               <img src={leaves} alt="Decorative Leaves" />
             </div>
             <button onClick={() => setIsFruit(false)}>
-              <div className="h-36 w-36 xl:h-60 xl:w-60 rounded-full flex items-center justify-center">
+              <div className="h-36 w-36 xl:h-60 xl:w-56 rounded-full flex items-center justify-center">
                 <img src={exercise} alt="Exercise Icon" />
               </div>
-              <h3 className="mt-4 text-lg font-bold">Exercise</h3>
+              <h3 className="text-lg font-bold">Exercise</h3>
             </button>
             <div className="absolute right-0 bottom-0 -rotate-90">
               <img src={leaves} alt="Decorative Leaves" />

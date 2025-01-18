@@ -12,8 +12,7 @@
         --right-spacing: 80px;
     }
 }
-
-/* Animation for the sliding effect */
+/* 
 @keyframes slideIn {
     0% {
         transform: translateX(100%);
@@ -21,9 +20,9 @@
     100% {
         transform: translateX(0);
     }
-}
+} */
 /* Ensure all steps will use the animation */
 /* Transition effect for ladder steps */
-.ladder-step {
+/* .ladder-step {
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
+} */

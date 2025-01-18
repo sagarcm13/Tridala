@@ -1,7 +1,6 @@
-import logo from './../assets/logo.png';
 import { Link } from 'react-router-dom';
 import Forms from './Forms';
-
+import TridalaLogo from './../assets/TridalaLogo.png';
 const Footer = () => {
 
   return (
@@ -16,7 +15,7 @@ const Footer = () => {
           <CompanyResource />
         </div>
       </div>
-      <div className="hidden  container mx-auto md:flex flex-col md:flex-row justify-between border-b-[1px] pb-4">
+      <div className="hidden container mx-auto md:flex flex-col md:flex-row justify-between border-b-[1px] pb-4">
         <Address />
         <CompanyResource />
         <FormHelper />
@@ -33,7 +32,7 @@ const CompanyResource = () => {
       <div className="flex space-x-16 md:space-x-8 xl:space-x-16 md:mt-16 mx-2">
         <div className="mb-8 md:mb-0">
           <h2 className="font-bold mb-4">Company</h2>
-          <ul className='space-y-2'>
+          <ul className='space-y-2 text-sm'>
             <li><Link to="/Team" className="hover:underline font-semibold">About Us</Link></li>
             <li><Link to="/Team" className="hover:underline font-semibold">Team</Link></li>
             <li><Link to="/Purpose" className="hover:underline font-semibold">Journey</Link></li>
@@ -42,7 +41,7 @@ const CompanyResource = () => {
         </div>
         <div>
           <h2 className="font-bold mb-4">Resources</h2>
-          <ul className='space-y-2'>
+          <ul className='space-y-2 text-sm'>
             <li><Link to="/Products" className="hover:underline font-semibold">Products</Link></li>
             <li><Link to="/Events" className="hover:underline font-semibold">Newsletter</Link></li>
             <li><Link to="/HealthTips" className="hover:underline font-semibold">Health Tips</Link></li>
@@ -56,7 +55,7 @@ const CompanyResource = () => {
 const FormHelper = () => {
   return (
     <>
-      <div className="flex flex-col md:w-1/3 ">
+      <div className="flex flex-col">
         <h2 className="font-semibold my-4 md:mb-4 md:mt-16">Contact Us</h2>
         <Forms />
       </div>
@@ -67,7 +66,7 @@ const Address = () => {
   return (
     <>
       <div className="mb-8 md:mb-0 flex flex-col md:none md: items-center md:items-start">
-        <img src={logo} alt="Tridala Logo" className="w-40 mb-4 bg-white m-2 px-10 py-2 rounded-full" />
+        <img src={TridalaLogo} alt="Tridala Logo" className="w-40 my-2" />
         <div>
           <address className="not-italic mb-4">
             Tridala Pharmaceuticals Pvt. Ltd. <br />
@@ -77,7 +76,7 @@ const Address = () => {
           <a href="mailto:order@tridalapharma.com" className="block mb-2">For order: order@tridalapharma.com</a>
           <a href="mailto:hr@tridalapharma.com" className="block mb-2">Job application: hr@tridalapharma.com</a>
           <a href="mailto:info@tridalapharma.com" className="block mb-2">Any quires: info@tridalapharma.com</a>
-          <a href="tel:+91808813599">+91 80881 13599</a>
+          <a href="tel:+91808813599">WhatsApp: +91 80881 13599</a>
         </div>
       </div>
     </>
@@ -87,10 +86,10 @@ const SocialMedia = () => {
   return (
     <>
       <div className="flex justify-center md:justify-end text-2xl md:text-3xl space-x-10 mt-5 md:mt-8 md:mx-28 xl:mx-40">
-        <a href="https://twitter.com" className="text-white hover:text-gray-200"><i className="fab fa-x-twitter"></i></a>
-        <a href="https://instagram.com" className="text-white hover:text-gray-200"><i className="fab fa-instagram"></i></a>
-        <a href="https://facebook.com" className="text-white hover:text-gray-200"><i className="fab fa-facebook"></i></a>
-        <a href="https://linkedin.com" className="text-white hover:text-gray-200"><i className="fab fa-linkedin"></i></a>
+        <a href="https://x.com/tridala_pharma" target='_blank' className="text-white hover:text-gray-200"><i className="fab fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/tridala_pharmaceuticals" target='_blank' className="text-white hover:text-gray-200"><i className="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61568375807483" target='_blank' className="text-white hover:text-gray-200"><i className="fab fa-facebook"></i></a>
+        <a href=" www.linkedin.com/in/tridala-pharma" target='_blank' className="text-white hover:text-gray-200"><i className="fab fa-linkedin"></i></a>
       </div>
     </>
   );

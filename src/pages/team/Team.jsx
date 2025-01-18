@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import teamPoster from './../../assets/teamPoster.png';
+import teamPoster from './../../assets/teamPoster.svg';
 import founder from './../../assets/people/founder.png';
 import hrf from './../../assets/people/hrf.png';
 import ceo from './../../assets/people/ceo.png';
@@ -105,7 +105,7 @@ export default function Team() {
           <img src={teamPoster} className='w-full' alt="founder image" />
         </div>
         <div className="flex flex-col text-center space-y-3 md:space-y-10 xl:space-y-15 m-5 md:m-10 xl:m-15">
-          <div className='text-[#218275] text-2xl md:text-5xl xl:text-7xl font-bold my-20'>MEET OUR TEAM</div>
+          <div className='text-[#189D90] text-2xl md:text-5xl xl:text-7xl font-bold my-10 md:my-20'>MEET OUR TEAM</div>
           <div className="text-xl font-semibold md:text-3xl xl:text-5xl my-10 md:my-16 xl:my-20">Our Founder</div>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center md:justify-around space-y-10 md:space-y-0 md:space-x-10 xl:space-x-20 p-5 md:p-10 xl:mx-28">
@@ -114,7 +114,7 @@ export default function Team() {
             src={founder}
             alt="Profile"
           />
-          <div className="text-[#218275] text-center md:text-left text-sm font-medium md:text-xl xl:text-3xl xl:leading-10 space-y-4 xl:space-y-8">
+          <div className="text-[#189D90] text-center md:text-left text-sm font-medium md:text-xl xl:text-2xl xl:leading-10 space-y-4 xl:space-y-8">
             <div className="text-justify xl:leading-10 ">
               Kemparju. K was born into a farming family. He completed his education at a government school and developed a long-term vision to contribute to society through a multidisciplinary approach. He began his career as a small entrepreneur across various fields, achieving success through his dedication, discipline, and devotion.
             </div>
@@ -143,7 +143,7 @@ export default function Team() {
             {advisoryTeam.map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-col bg-[#3DAAA5E3] rounded-3xl w-52 md:w-52 xl:w-80 md:h-[550px] xl:h-[700px] mx-2 ${index === 0 ? 'mt-0' : 'mt-2'
+                className={`flex flex-col bg-[#3DAAA5E3] rounded-3xl w-52 md:w-52 xl:w-80 h-[470px] md:h-[550px] xl:h-[700px] mx-2 ${index === 0 ? 'mt-0' : 'mt-2'
                   }`}
               >
                 <img src={item.img} className='h-52 md:h-64 xl:h-[350px]' alt="" />

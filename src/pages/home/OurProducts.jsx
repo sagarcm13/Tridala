@@ -3,18 +3,18 @@ import { useState, useEffect } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 import image1 from "./../../assets/homeProducts/img1.svg"
-import image2 from "./../../assets/homeProducts/img2.svg"
+import img2 from "./../../assets/homeProducts/img2.png"
 import image3 from "./../../assets/homeProducts/img3.svg"
-import image4 from "./../../assets/homeProducts/img4.svg"
+import imag from "./../../assets/homeProducts/img.png"
 import image5 from "./../../assets/homeProducts/img5.svg"
 import image6 from "./../../assets/homeProducts/img6.svg"
-import image7 from "./../../assets/homeProducts/img7.svg"
+import img7 from "./../../assets/homeProducts/img7.png"
 import image9 from "./../../assets/homeProducts/img9.svg"
 import image10 from "./../../assets/homeProducts/img10.svg"
 import { useNavigate } from "react-router-dom";
 
 export default function OurProducts() {
-    const images = [image5, image9, image3, image4, image1, image6, image7, image2, image10];
+    const images = [image5, image9, image3, imag, image1, image6, img7, img2, image10];
     const [currentIndex, setCurrentIndex] = useState(0);
     const [visibleSlides, setVisibleSlides] = useState(1);
     let navigate = useNavigate();
@@ -99,14 +99,20 @@ const ImageSlider2 = ({ images }) => {
     let navigate = useNavigate();
 
     const handleNextSlide = () => {
+        console.log("hits");
         if (currentIndex < images.length - 2) {
             setCurrentIndex(currentIndex + 1);
+        } else {
+            let index = (currentIndex + 2) % images.length;
+            setCurrentIndex(index);
         }
     };
 
     const handlePrevSlide = () => {
         if (currentIndex > 0) {
             setCurrentIndex(currentIndex - 1);
+        } else {
+            setCurrentIndex((currentIndex - 2 + images.length) % images.length);
         }
     };
 
@@ -115,9 +121,7 @@ const ImageSlider2 = ({ images }) => {
             {/* Previous Button */}
             <button
                 onClick={handlePrevSlide}
-                className={`absolute md:left-1 xl:left-4 top-1/2 transform -translate-y-1/2 rounded-full z-10 ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
-                    }`}
-                disabled={currentIndex === 0}
+                className={`absolute md:left-1 xl:left-4 top-1/2 transform -translate-y-1/2 rounded-full z-10`}
             >
                 <IoIosArrowBack size={60} />
             </button>
@@ -143,10 +147,7 @@ const ImageSlider2 = ({ images }) => {
             {/* Next Button */}
             <button
                 onClick={handleNextSlide}
-                className={`absolute md:right-1 xl:right-4 top-1/2 transform -translate-y-1/2 rounded-full z-10 ${currentIndex >= images.length - 2 ? "opacity-50 cursor-not-allowed" : ""
-                    }`}
-                disabled={currentIndex >= images.length - 2}
-            >
+                className={`absolute md:right-1 xl:right-4 top-1/2 transform -translate-y-1/2 rounded-full z-10`}>
                 <IoIosArrowForward size={60} />
             </button>
         </div>
@@ -157,36 +158,42 @@ const ThreeImageSlider = ({ images }) => {
     let navigate = useNavigate();
 
     const handleNextSlide = () => {
-        if (currentIndex < images.length - 3) {
-            setCurrentIndex(currentIndex + 1);
-        }
+        setCurrentIndex((currentIndex + 1) % images.length);
     };
 
     const handlePrevSlide = () => {
-        if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1);
-        }
+        setCurrentIndex((currentIndex - 1 + images.length) % images.length);
     };
+
+    const getVisibleImages = () => {
+        const len = images.length;
+        const prevIndex = (currentIndex - 1 + len) % len;
+        const nextIndex = (currentIndex + 1) % len;
+
+        return [
+            images[prevIndex], // Image to the left
+            images[currentIndex], // Center image
+            images[nextIndex], // Image to the right
+        ];
+    };
+
+    const visibleImages = getVisibleImages();
 
     return (
         <div className="hidden relative w-full max-w-9xl mx-auto xl:flex items-center font-lato">
             {/* Previous Button */}
             <button
                 onClick={handlePrevSlide}
-                className={`absolute left-2 color-[#005239] top-1/2 transform -translate-y-1/2 rounded-full z-10 ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
-                disabled={currentIndex === 0}
+                className="absolute left-2 color-[#005239] top-1/2 transform -translate-y-1/2 rounded-full z-10"
             >
                 <IoIosArrowBack size={80} />
             </button>
 
             {/* Slider Container */}
             <div className="flex overflow-hidden relative w-full mx-16">
-                <div
-                    className="flex transition-transform duration-300"
-                    style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
-                >
-                    {images.map((image, index) => {
-                        const isCenter = index === currentIndex + 1; // Center image logic
+                <div className="flex transition-transform duration-300 w-full justify-center items-center">
+                    {visibleImages.map((image, index) => {
+                        const isCenter = index === 1; // Middle image
                         return (
                             <div
                                 key={index}
@@ -199,7 +206,7 @@ const ThreeImageSlider = ({ images }) => {
                                 <img
                                     onClick={() => navigate("Products")}
                                     src={image}
-                                    alt={`Slide ${index + 1}`}
+                                    alt={`Slide ${currentIndex + index}`}
                                     className={`rounded-lg cursor-pointer ${isCenter ? "w-[600px] h-56" : "w-[500px] h-52 opacity-70"}`}
                                 />
                             </div>
@@ -211,8 +218,7 @@ const ThreeImageSlider = ({ images }) => {
             {/* Next Button */}
             <button
                 onClick={handleNextSlide}
-                className={`absolute right-2 top-1/2 transform -translate-y-1/2 rounded-full z-10 ${currentIndex >= images.length - 3 ? "opacity-50 cursor-not-allowed" : ""}`}
-                disabled={currentIndex >= images.length - 3}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 rounded-full z-10"
             >
                 <IoIosArrowForward size={80} />
             </button>

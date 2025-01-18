@@ -3,7 +3,24 @@ import qualityIcon from './../../assets/icons/quality.png';
 import rangeIcon from './../../assets/icons/range.png';
 import supplyChainIcon from './../../assets/icons/supplyChain.png';
 import background from './../../assets/back.png';
+import { useEffect, useState } from 'react';
+
 const MissionValues = () => {
+  const [bgImage, setBgImage] = useState(background);
+
+  useEffect(() => {
+    const updateBackground = () => {
+      if (window.innerWidth >= 768) {
+        setBgImage(background);
+      } else {
+        setBgImage('');
+      }
+    };
+    updateBackground(); // Initial check
+    window.addEventListener('resize', updateBackground);
+    return () => window.removeEventListener('resize', updateBackground);
+  }, []);
+
   const values = [
     {
       icon: affordabilityIcon,
@@ -30,7 +47,7 @@ const MissionValues = () => {
 
   return (
     <div className="py-20 px-8 font-lato md:space-y-20 xl:space-y-20" style={{
-      backgroundImage: `url(${background})`,
+      backgroundImage: `url(${bgImage})`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       backgroundColor: '#79B3AF',
@@ -59,7 +76,7 @@ const MissionValues = () => {
       </div>
       <div className="hidden md:flex justify-around md:m-3 xl:mx-96">
         {values.map((value, index) => (
-          <div key={index} className="bg-white rounded-3xl shadow-xl p-6 xl:p-10 flex flex-col items-center text-center md:space-y-4 w-64 h-64 xl:w-72 xl:h-72">
+          <div key={index} className="bg-white rounded-3xl shadow-xl p-6 xl:p-9 flex flex-col items-center text-center md:space-y-4 w-64 h-64 xl:w-72 xl:h-72">
             <img src={value.icon} alt={value.title} className="h-8 w-8 xl:h-10 xl:w-12" />
             <h3 className="text-xl xl:text-2xl font-semibold text-[#218275]">{value.title}</h3>
             <p className="text-lg text-semibold leading-none text-[#2B8A6D]  text-justify">{value.description}</p>
@@ -68,7 +85,7 @@ const MissionValues = () => {
       </div>
       <div className="hidden md:flex justify-around md:m-5 xl:mx-96">
         {values2.map((value, index) => (
-          <div key={index} className="bg-white rounded-3xl shadow-xl p-6 xl:p-10 flex flex-col items-center text-center md:space-y-4 w-64 h-64 xl:w-72 xl:h-72">
+          <div key={index} className="bg-white rounded-3xl shadow-xl p-6 xl:p-9 flex flex-col items-center text-center md:space-y-4 w-64 h-64 xl:w-72 xl:h-72">
             <img src={value.icon} alt={value.title} className="h-8 w-8 xl:h-8 xl:w-12" />
             <h3 className="text-xl xl:text-2xl font-semibold text-[#218275]">{value.title}</h3>
             <p className="text-lg text-semibold leading-none text-[#2B8A6D] text-justify">{value.description}</p>

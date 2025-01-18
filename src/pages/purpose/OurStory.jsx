@@ -19,10 +19,10 @@ const OurStory = () => {
         <div className="bg-[#189D90] font-lato p-6 flex flex-col md:items-start md:flex-row md:justify-around xl:p-16">
             <div className="text-justify md:w-[70%] p-5 xl:p-10">
                 <div className="text-3xl md:text-6xl xl:text-9xl font-bold text-[#E47A4E]">OUR</div>
-                <div className=" text-3xl md:text-6xl xl:text-9xl font-extrabold text-[#E47A4E]">STORY</div>
+                <div className=" text-3xl md:text-6xl xl:text-9xl font-bold text-[#E47A4E]">STORY</div>
                 <div className="mt-8 space-y-6">
                     <div className="flex md:items-start justify-center items-center">
-                        <div className={`w-4 bg-white`} style={{ height: `${height}px` }}></div>
+                        <div className={`w-4 bg-white`} style={{ height: `${height-20}px` }}></div>
                         <div className='space-y-8' ref={divRef}>
                             <div className='flex items-center space-x-1'>
                                 <div className="w-24 md:w-40 xl:w-[420px] h-0.5 bg-white"></div>

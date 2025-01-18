@@ -33,7 +33,7 @@ export default function Events() {
                     ))}
                 </div>
             </div>
-            <div className='text-center bg-[#E1EFF5]'>
+            <div className='text-center font-lato bg-[#E1EFF5]'>
                 <div className='text-[#ED6636] font-bold py-10 text-2xl md:text-3xl xl:text-4xl'>Videos</div>
                 <div className='p-2 md:p-10 xl:p-20 py-10 flex flex-col justify-center'>
                     <video className='xl:h-[580px] w-auto' controls>

@@ -19,14 +19,14 @@ const Home = () => {
                 >
                     <source src={homePageVideo} type="video/mp4" />
                 </video>
-                <FloatingWhatsApp phoneNumber="8088113599" accountName="Tridala Pharma" />   {/* set phoneNumber account Name*/}
+                <FloatingWhatsApp phoneNumber="8088113599" accountName="Tridala Pharma" />
             </div>
             <div className='bg-slate-200 flex flex-col justify-center text-center pt-60 md:pt-[500px] xl:pt-40'>
                 <div className='p-5 md:p-20'>
                     <img src={homePoster} className='w-max' alt="" />
                 </div>
-                <div className='text-2xl md:text-3xl xl:text-4xl text-[#218275] font-semibold md:space-y-10 xl:space-y-16 my-10 md:my-20 xl:my-24'>
-                    <div className='font-lato'>
+                <div className='text-[#218275] font-semibold md:space-y-10 xl:space-y-16 my-10 md:my-20 xl:my-24'>
+                    <div className='font-lato text-3xl md:text-4xl xl:text-5xl'>
                         <span>Our</span> <span className='text-[#ED6636]'>Products</span>
                     </div>
                     <OurProducts />
@@ -49,8 +49,6 @@ const Home = () => {
                         <button onClick={() => { navigate('purpose'); }} className='bg-[#25988B] px-8 xl:px-12 py-3 xl:py-5 rounded-full text-white '>More</button>
                     </div>
                 </div>
-
-
                 <div className='hidden md:flex font-lato justify-around m-3 md:m-5 xl:m-10'>
                     <div className='flex flex-col p-5 md:w-[50%] justify-start text-start md:m-5 xl:m-10'>
                         <div className='text-[#25988B] text-4xl md:text-5xl xl:text-7xl font-extrabold'>OUR</div>

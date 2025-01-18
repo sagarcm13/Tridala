@@ -28,23 +28,23 @@ const Ladder = () => {
         updateSpacing();
         window.addEventListener('resize', updateSpacing);
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const index = stepsRef.current.indexOf(entry.target);
-                        setVisibleSteps((prev) => {
-                            const updated = [...prev];
-                            updated[index] = true;
-                            return updated;
-                        });
-                    }
-                });
-            },
-            { threshold: 0.5 } // trigger when 50% of the element is in the viewport
-        );
+        // const observer = new IntersectionObserver(
+        //     (entries) => {
+        //         entries.forEach((entry) => {
+        //             if (entry.isIntersecting) {
+        //                 const index = stepsRef.current.indexOf(entry.target);
+        //                 setVisibleSteps((prev) => {
+        //                     const updated = [...prev];
+        //                     updated[index] = true;
+        //                     return updated;
+        //                 });
+        //             }
+        //         });
+        //     },
+        //     { threshold: 0.5 }
+        // );
 
-        stepsRef.current.forEach((step) => observer.observe(step));
+        // stepsRef.current.forEach((step) => observer.observe(step));
 
         return () => window.removeEventListener('resize', updateSpacing);
     }, []);
@@ -63,7 +63,7 @@ const Ladder = () => {
                         the highest standards of quality, safety & efficacy.
                     </div>
                     {/* Staircase Design */}
-                    <div className="md:relative flex flex-col md:w-[50%] space-y-[1px] md:space-y-0 items-center md:items-end md:justify-center p-5 md:mt-5">
+                    <div className="md:relative flex flex-col md:w-[50%] items-center md:items-end md:justify-center p-5 md:mt-5">
                         {ladder.map((step, index) => (
                             <div
                                 key={index}
@@ -72,9 +72,9 @@ const Ladder = () => {
                                 style={{
                                     top: `${index * spacing.top}px`,
                                     right: `${index * spacing.right}px`,
-                                    opacity: visibleSteps[index] ? 1 : 0,
-                                    transform: visibleSteps[index] ? 'translateX(0)' : 'translateX(100%)',
-                                    transition: `transform 0.5s ease-out, opacity 0.5s ease-out ${index * 0.5}s`,
+                                    // opacity: visibleSteps[index] ? 1 : 0,
+                                    // transform: visibleSteps[index] ? 'translateX(0)' : 'translateX(100%)',
+                                    // transition: `transform 0.5s ease-out, opacity 0.5s ease-out ${index * 0.5}s`,
                                 }}
                             >
                                 {step.text}
