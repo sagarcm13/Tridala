@@ -17,7 +17,7 @@ export default function Events() {
     return (
         <>
             <div className="bg-[#189D90] text-center font-lato">
-                <div className="text-white font-semibold text-2xl md:text-4xl xl:text-5xl py-10">
+                <div className="text-white font-medium text-2xl md:text-4xl xl:text-5xl py-10">
                     Bringing our mission to life
                 </div>
                 {/* Grid container */}
