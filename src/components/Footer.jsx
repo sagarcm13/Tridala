@@ -16,7 +16,7 @@ const Footer = () => {
           <Resource />
         </div>
       </div>
-      <div className="hidden container mx-auto md:flex flex-col md:flex-row justify-between border-b-[1px] pb-4">
+      <div className="hidden mx-4 xl:mx-20 md:flex flex-col md:flex-row justify-between border-b-[1px] pb-4">
         <Address />
         <Company />
         <Resource />

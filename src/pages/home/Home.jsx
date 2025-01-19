@@ -1,13 +1,16 @@
-import homePoster from './../../assets/homePoster.png';
+import poster1 from './../../assets/TridalaBanners/Home1.svg';
+import poster2 from './../../assets/TridalaBanners/Home2.svg';
 import homePageVideo from './../../assets/homePageVideo.mp4';
 import MissionValues from './MissionValues.jsx';
 import OurProducts from './OurProducts.jsx';
 import { useNavigate } from "react-router-dom";
 import tablets from "./../../assets/tablets.png"
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
+import BannerCarousel from '../../components/BannerCarousel.jsx';
 
 const Home = () => {
     let navigate = useNavigate();
+    const images = [poster1, poster2];
     return (
         <>
             <div className="font-lato w-full xl:h-[calc(100vh-80px)] bg-slate-200 flex flex-col justify-center text-center relative">
@@ -19,11 +22,11 @@ const Home = () => {
                 >
                     <source src={homePageVideo} type="video/mp4" />
                 </video>
-                <FloatingWhatsApp phoneNumber="8088113599" accountName="Tridala Pharma" />
+                <FloatingWhatsApp phoneNumber="+918088113599" accountName="Tridala Pharma" />
             </div>
             <div className='bg-slate-200 flex flex-col justify-center text-center pt-60 md:pt-[500px] xl:pt-40'>
                 <div className='p-5 md:p-20'>
-                    <img src={homePoster} className='w-max' alt="" />
+                    <BannerCarousel images={images} />
                 </div>
                 <div className='text-[#218275] font-semibold md:space-y-10 xl:space-y-16 my-10 md:my-20 xl:my-24'>
                     <div className='font-lato text-3xl md:text-4xl xl:text-5xl'>

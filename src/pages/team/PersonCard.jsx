@@ -8,9 +8,15 @@ const PersonCard = ({ person }) => {
   const handleToggle = () => {
     setIsVisible(!isVisible);
   };
+  const handleMouseEnter = () => {
+    setIsVisible(true);
+  }
+  const handleMouseLeave = () => {
+    setIsVisible(false);
+  }
 
   return (
-    <div className="card-container relative h-36 w-48 md:w-auto md:h-60 xl:h-[350px]" onMouseEnter={handleToggle} onMouseLeave={handleToggle}>
+    <div className="card-container relative h-36 w-48 md:w-auto md:h-60 xl:h-[350px]" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div
         className={`card-inner ${isVisible ? "flipped" : ""}`}
         onClick={handleToggle}
@@ -18,6 +24,7 @@ const PersonCard = ({ person }) => {
         {/* Front Side */}
         <div className="card-front">
           <img
+            onClick={handleToggle}
             src={person.img}
             alt="Chairperson"
             className="card-image rounded-md"
@@ -34,7 +41,7 @@ const PersonCard = ({ person }) => {
               <a href={person.x} target="_blank" rel="noreferrer">
                 <i className="fab fa-x-twitter"></i>
               </a>
-              <a href={person.instagram}target="_blank" rel="noreferrer">
+              <a href={person.instagram} target="_blank" rel="noreferrer">
                 <i className="fab fa-instagram"></i>
               </a>
               <a href={person.facebook} target="_blank" rel="noreferrer">

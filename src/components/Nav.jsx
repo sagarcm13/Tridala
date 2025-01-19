@@ -78,7 +78,7 @@ const Nav = () => {
             </nav>
             {/* Mobile Navigation */}
             {isOpen && (
-                <div className="md:hidden flex flex-col items-center space-y-4 mt-4 bg-white w-full">
+                <div className="md:hidden flex flex-col items-center space-y-4 mt-4 bg- w-full">
                     {links.map((link) => (
                         <Link
                             key={link.path}

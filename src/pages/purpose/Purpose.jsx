@@ -1,13 +1,17 @@
-import purposePoster from './../../assets/purposePoster.svg'
 import OurStory from './OurStory.jsx';
 import Ladder from './Ladder.jsx';
 import left from './../../assets/icons/missionleft.svg';
 import right from './../../assets/icons/missionright.svg';
+import BannerCarousel from '../../components/BannerCarousel.jsx';
+import Purpose1 from './../../assets/TridalaBanners/Purpose1.svg';
+import Purpose2 from './../../assets/TridalaBanners/Purpose2.svg';
+import Purpose3 from './../../assets/TridalaBanners/Purpose3.svg';
 export default function Purpose() {
+  const images =[Purpose1,Purpose2,Purpose3];
   return (
     <>
       <div className='font-lato'>
-        <img src={purposePoster} className='w-full' alt="" />
+        <BannerCarousel images={images} />
       </div>
       <OurStory />
       <Ladder />

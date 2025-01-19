@@ -27,7 +27,6 @@ const Ladder = () => {
 
         updateSpacing();
         window.addEventListener('resize', updateSpacing);
-
         // const observer = new IntersectionObserver(
         //     (entries) => {
         //         entries.forEach((entry) => {
@@ -43,14 +42,12 @@ const Ladder = () => {
         //     },
         //     { threshold: 0.5 }
         // );
-
         // stepsRef.current.forEach((step) => observer.observe(step));
-
         return () => window.removeEventListener('resize', updateSpacing);
     }, []);
 
     return (
-        <div className="font-lato bg-gradient-to-b from-[#ffffff] min-h-screen to-[#339C91] flex mt-10 md:mt-20 justify-center px-4">
+        <div className="font-lato bg-gradient-to-b from-[#ffffff] md:min-h-screen to-[#339C91] flex mt-10 md:mt-20 justify-center px-4">
             <div className="text-center max-w-7xl w-full">
                 {/* Logo and Description */}
                 <div className="my-4 max-w-md">

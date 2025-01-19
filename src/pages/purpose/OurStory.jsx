@@ -6,14 +6,20 @@ import image5 from './../../assets/ourStory/image5.png';
 import { useRef, useEffect, useState } from "react";
 
 const OurStory = () => {
-    const divRef = useRef(null); // Create a ref
+    const divRef = useRef(null); // Ref for the main content div
+    const lastDivRef = useRef(null); // Ref for the last div
     const [height, setHeight] = useState(0);
+    const [lastDivHeight, setLastDivHeight] = useState(0);
 
     useEffect(() => {
         if (divRef.current) {
             setHeight(divRef.current.offsetHeight);
         }
-    }, [height]);
+        if (lastDivRef.current) {
+            setLastDivHeight(lastDivRef.current.offsetHeight);
+        }
+    }, [height, lastDivHeight]);
+
     return (
         <div className="bg-[#189D90] font-lato p-6 flex flex-col md:items-start md:flex-row md:justify-around xl:p-16">
             <div className="text-justify md:w-[70%] p-5 xl:p-10">
@@ -21,7 +27,7 @@ const OurStory = () => {
                 <div className="text-3xl md:text-6xl xl:text-9xl font-bold text-[#E47A4E]">STORY</div>
                 <div className="space-y-6 ml-4 xl:ml-10">
                     <div className="flex md:items-start justify-center items-center">
-                        <div className={`w-4 bg-white`} style={{ height: `${height-10}px` }}></div>
+                        <div className={`w-4 bg-white`} style={{ height: `${height - (lastDivHeight / 2 - 45)}px` }}></div>
                         <div className='space-y-4 md:space-y-8 mt-14 md:mt-8 xl:mt-10' ref={divRef}>
                             <div className='flex items-center space-x-1'>
                                 <div className="w-24 md:w-40 xl:w-[420px] h-0.5 bg-white"></div>
@@ -37,7 +43,7 @@ const OurStory = () => {
                             </div>
                             <div className='flex items-center space-x-1'>
                                 <div className="w-24 md:w-40 xl:w-[550px] h-0.5 bg-white"></div>
-                                <div className="text-white text-sm md:text-xl xl:text-2xl leading-tight md:leading-tight xl:leading-tight">Recognizing that the community needed more than just food assistance, he and his family—serving as the board of directors—established a framework of Trusted, Revolutionary, Innovative, Defined Affordability in collaboration with a league of esteemed pharmaceutical and medical practitioners. This initiative aims to ensure the community has access to a wide range of affordable medicines, thereby addressing a critical need within the community.</div>
+                                <div ref={lastDivRef} className="text-white text-sm md:text-xl xl:text-2xl leading-tight md:leading-tight xl:leading-tight">Recognizing that the community needed more than just food assistance, he and his family—serving as the board of directors—established a framework of Trusted, Revolutionary, Innovative, Defined Affordability in collaboration with a league of esteemed pharmaceutical and medical practitioners. This initiative aims to ensure the community has access to a wide range of affordable medicines, thereby addressing a critical need within the community.</div>
                             </div>
                         </div>
                     </div>

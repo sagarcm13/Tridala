@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-key */
-import teamPoster from './../../assets/teamPoster.svg';
 import founder from './../../assets/people/founder.png';
 import hrf from './../../assets/people/hrf.png';
 import ceo from './../../assets/people/ceo.png';
@@ -10,8 +9,13 @@ import diabetesSpecialist from "./../../assets/people/diabetesSpecialist.png"
 import surgeon from "./../../assets/people/surgeon.png"
 import Pediatrician from "./../../assets/people/Pediatrician.png"
 import surgicalOncologist from "./../../assets/people/surgicalOncologist.png"
+import BannerCarousel from '../../components/BannerCarousel.jsx';
+import Journey1 from './../../assets/TridalaBanners/Journey1.svg';
+import Journey2 from './../../assets/TridalaBanners/Journey2.svg';
+import Journey3 from './../../assets/TridalaBanners/Journey3.svg';
 import PersonCard from './PersonCard';
 export default function Team() {
+  const images = [Journey2, Journey1, Journey3];
   const personsRow1 = [
     {
       img: chairperson,
@@ -60,7 +64,7 @@ export default function Team() {
     {
       img: Pediatrician,
       name: "DR. Narasimppa  GM",
-      role: "Pediatrician",
+      role: "PEDIATRICIAN",
       description: "Dr. Narasimhappa advises Tridala to ensure its medicines meet the critical needs of pediatric care, focusing on effective, safe, and accessible solutions for children.",
       x: "https://twitter.com",
       instagram: "https://instagram.com",
@@ -80,7 +84,7 @@ export default function Team() {
     {
       img: surgicalOncologist,
       name: "DR. Girish G",
-      role: "Surgical oncologist",
+      role: "SURGICAL ONCOLOGIST",
       description: "Dr. Girish, MBBS, MS, MCh, is an experienced surgical oncologist specializing in laparoscopic and robotic surgeries, offering over 14 years of expert, compassionate care to cancer patients.",
       x: "https://twitter.com",
       instagram: "https://instagram.com",
@@ -102,7 +106,7 @@ export default function Team() {
     <>
       <div className="bg-slate-200 font-lato">
         <div>
-          <img src={teamPoster} className='w-full' alt="founder image" />
+          <BannerCarousel images={images} />
         </div>
         <div className="flex flex-col text-center space-y-3 md:space-y-10 xl:space-y-15 m-5 md:m-10 xl:m-15">
           <div className='text-[#189D90] text-2xl md:text-5xl xl:text-7xl font-bold my-10 md:my-20'>MEET OUR TEAM</div>
@@ -127,12 +131,12 @@ export default function Team() {
         <div className='flex justify-center p-5 md:p-10  my-10 md:my-16 xl:my-20'>
           <div className='text-3xl xl:text-5xl font-semibold'>Board of Directors</div>
         </div>
-        <div className="flex flex-col md:flex-row justify-center md:space-x-28 xl:space-x-40 items-center space-y-2 md:space-y-0 p-2 md:py-10">
+        <div className="flex flex-col md:flex-row justify-center md:space-x-28 xl:space-x-40 items-center space-y-4 md:space-y-0 p-2 md:py-10">
           {personsRow1.map((person) => {
             return (<PersonCard person={person} />);
           })}
         </div>
-        <div className="flex flex-col md:flex-row md:justify-center md:space-x-28 xl:space-x-40 items-center space-y-2 md:space-y-0 p-2 md:py-10">
+        <div className="flex flex-col md:flex-row md:justify-center md:space-x-28 xl:space-x-40 items-center space-y-4 md:space-y-0 p-2 md:py-10">
           {personsRow2.map((person) => {
             return (<PersonCard person={person} />);
           })}
