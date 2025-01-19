@@ -12,7 +12,7 @@ export default function BannerCarousel({ images }) {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        arrows: false, // Hide next/prev arrows
+        arrows: false,
     };
 
     return (

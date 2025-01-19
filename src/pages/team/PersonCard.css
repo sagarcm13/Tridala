@@ -42,7 +42,7 @@
 .card-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 /* Back side styles */
@@ -50,7 +50,6 @@
     background-color: #189D90;
     color: white;
     transform: rotateY(-180deg);
-    /* Ensure back starts flipped */
     display: flex;
     flex-direction: column;
     justify-content: center;

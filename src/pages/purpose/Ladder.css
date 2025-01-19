@@ -1,3 +1,7 @@
+:root {
+    --top-spacing: 40px;
+    --right-spacing: 14px;
+}
 /* Responsive Spacing Adjustments */
 @media (min-width: 768px) {
     :root {

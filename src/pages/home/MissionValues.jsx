@@ -1,4 +1,4 @@
-import affordabilityIcon from './../../assets/icons/affordability.png';
+import affordabilityIcon from './../../assets/icons/cash.svg';
 import qualityIcon from './../../assets/icons/quality.png';
 import rangeIcon from './../../assets/icons/range.png';
 import supplyChainIcon from './../../assets/icons/supplyChain.png';
