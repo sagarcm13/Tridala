@@ -146,13 +146,13 @@ function ImageSlider3({ images }) {
                     return (
                         <div
                             key={index}
-                            className="grid place-content-center px-5 transition-all duration-300 ease-in-out h-60" // Ensure height consistency
+                            className="grid place-content-center place-items-center transition-all duration-300 ease-in-out h-60" 
                         >
                             <img
                                 src={image}
                                 alt={`Slide ${index + 1}`}
-                                className={`object-cover rounded-lg ${
-                                    isCenter ? 'h-56 w-full' : 'h-52 w-full opacity-70'
+                                className={`object-fill ${
+                                    isCenter ? 'h-60 w-full' : 'h-48 w-80 opacity-70'
                                 }`} 
                                 onClick={() => {
                                     navigate('Products');
