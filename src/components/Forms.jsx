@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 export default function Forms() {
     // State for storing form data
@@ -8,12 +9,8 @@ export default function Forms() {
         phone: "",
         content: "",
     });
-
-    // State for submission status and loading indicator
     const [status, setStatus] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
-
-    // Handle input changes
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
@@ -21,35 +18,23 @@ export default function Forms() {
             [name]: value,
         }));
     };
-
-    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
         const scriptURL = import.meta.env.VITE_SCRIPT_URL;
-
-        // Ensure script URL is configured
         if (!scriptURL) {
             setStatus("Error: Script URL is not configured in the environment.");
             return;
         }
-
         setIsSubmitting(true); // Start loading state
         setStatus(""); // Clear previous status messages
-
         try {
-            const response = await fetch(scriptURL, {
-                method: "POST",
+            const response = await axios.post(scriptURL, formData, {
                 headers: {
                     "Content-Type": "text/plain;charset=utf-8",
                 },
-                body: JSON.stringify(formData),
             });
-
-            if (!response.ok) throw new Error("Network response was not ok");
-
-            const result = await response.json();
-
-            if (result.status === "success") {
+            console.log(response);
+            if (response.data.status === "success") {
                 setStatus("Form submitted successfully!");
                 setFormData({ name: "", email: "", phone: "", content: "" });
             } else {
