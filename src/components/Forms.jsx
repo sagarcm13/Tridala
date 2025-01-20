@@ -35,7 +35,6 @@ export default function Forms() {
             });
             if (response.status === 200) {
                 setStatus("Form submitted successfully!");
-                setFormData({ name: "", email: "", phone: "", content: "" });
             } else {
                 setStatus("Failed to submit the form. Please try again.");
             }
@@ -45,6 +44,7 @@ export default function Forms() {
         } finally {
             setIsSubmitting(false); // Stop loading state
         }
+        setFormData({ name: "", email: "", phone: "", content: "" });
     };
 
     return (
@@ -109,7 +109,7 @@ export default function Forms() {
                         {isSubmitting ? "Submitting..." : "Submit"}
                     </button>
                 </div>
-                {status && (
+                {/* {status && (
                     <p
                         className={`mt-4 ${
                             status.includes("success") ? "text-green-500" : "text-red-500"
@@ -117,7 +117,7 @@ export default function Forms() {
                     >
                         {status}
                     </p>
-                )}
+                )} */}
             </form>
         </>
     );
