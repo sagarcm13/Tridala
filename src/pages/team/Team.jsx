@@ -14,6 +14,8 @@ import Journey1 from './../../assets/TridalaBanners/Journey1.svg';
 import Journey2 from './../../assets/TridalaBanners/Journey2.svg';
 import Journey3 from './../../assets/TridalaBanners/Journey3.svg';
 import PersonCard from './PersonCard';
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
+
 export default function Team() {
   const images = [Journey2, Journey1, Journey3];
   const personsRow1 = [
@@ -108,6 +110,7 @@ export default function Team() {
         <div>
           <BannerCarousel images={images} />
         </div>
+        <FloatingWhatsApp phoneNumber="+918088113599" accountName="Tridala Pharma" /> 
         <div className="flex flex-col text-center space-y-3 md:space-y-10 xl:space-y-15 m-5 md:m-10 xl:m-15">
           <div className='text-[#189D90] text-2xl md:text-5xl xl:text-7xl font-bold my-10 md:my-20'>MEET OUR TEAM</div>
           <div className="text-xl font-semibold md:text-3xl xl:text-5xl my-10 md:my-16 xl:my-20">Our Founder</div>

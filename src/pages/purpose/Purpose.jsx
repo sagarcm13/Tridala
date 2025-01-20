@@ -6,6 +6,8 @@ import BannerCarousel from '../../components/BannerCarousel.jsx';
 import Purpose1 from './../../assets/TridalaBanners/Purpose1.svg';
 import Purpose2 from './../../assets/TridalaBanners/Purpose2.svg';
 import Purpose3 from './../../assets/TridalaBanners/Purpose3.svg';
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
+
 export default function Purpose() {
   const images =[Purpose1,Purpose2,Purpose3];
   return (
@@ -13,6 +15,7 @@ export default function Purpose() {
       <div className='font-lato'>
         <BannerCarousel images={images} />
       </div>
+      <FloatingWhatsApp phoneNumber="+918088113599" accountName="Tridala Pharma" />
       <OurStory />
       <Ladder />
       <div className='font-lato flex flex-col text-center pt-5 bg-slate-200 items-center '>

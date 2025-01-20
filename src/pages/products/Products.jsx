@@ -11,6 +11,7 @@ import img8 from './../../assets/productsPoster/8.svg';
 import img9 from './../../assets/productsPoster/9.svg';
 import img10 from './../../assets/productsPoster/10.svg';
 import img11 from './../../assets/productsPoster/11.svg';
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
 export default function Products() {
   const images = [product1, product2];
@@ -85,7 +86,7 @@ export default function Products() {
         <div className='bg-[#E1EFF5]'>
           <BannerCarousel images={images} />
         </div>
-        <div className="bg-[#E1EFF5] md:h-10 xl:h-20"></div>
+        <FloatingWhatsApp phoneNumber="+918088113599" accountName="Tridala Pharma" />
         <div className="bg-[#179C8E]">
           <div className="flex justify-center py-5 md:py-10 xl:py-20">
             <div className="text-white font-bold text-2xl md:text-3xl xl:text-5xl">

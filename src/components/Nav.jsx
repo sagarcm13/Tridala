@@ -32,11 +32,13 @@ const Nav = () => {
             <nav className="flex justify-between items-center px-4 py-2">
                 {/* Logo */}
                 <div className="text-2xl font-bold flex items-center">
-                    <img
-                        src={logo}
-                        alt="Tridala Logo"
-                        className="inline-block h-12 md:h-14 xl:h-16 ml-2 md:ml-4 xl:ml-16"
-                    />
+                    <Link to={'/'}>
+                        <img
+                            src={logo}
+                            alt="Tridala Logo"
+                            className="inline-block h-12 md:h-14 xl:h-16 ml-2 md:ml-4 xl:ml-16"
+                        />
+                    </Link>
                 </div>
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex space-x-8 xl:space-x-20 text-[#218275]">
@@ -44,9 +46,8 @@ const Nav = () => {
                         <Link
                             key={link.path}
                             to={link.path}
-                            className={`${titleStyle} ${
-                                location.pathname === link.path ? activeStyle : ""
-                            }`}
+                            className={`${titleStyle} ${location.pathname === link.path ? activeStyle : ""
+                                }`}
                         >
                             {link.label}
                         </Link>
@@ -84,9 +85,8 @@ const Nav = () => {
                             key={link.path}
                             to={link.path}
                             onClick={closeMenu}
-                            className={`hover:underline ${
-                                location.pathname === link.path ? activeStyle : ""
-                            }`}
+                            className={`hover:underline ${location.pathname === link.path ? activeStyle : ""
+                                }`}
                         >
                             {link.label}
                         </Link>

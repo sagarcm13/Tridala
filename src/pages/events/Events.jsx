@@ -11,6 +11,8 @@ import img13 from './../../assets/Website/img13.jpg';
 import img15 from './../../assets/Website/img15.JPG';
 import img16 from './../../assets/Website/img16.png';
 import TridalaEvent from './../../assets/Website/TridalaEvent.mp4'
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
+
 
 export default function Events() {
     const images = [img4, img2, img6, img8, img9, img11, img12, img13, img15, img1, img16, img3];
@@ -20,6 +22,7 @@ export default function Events() {
                 <div className="text-white font-medium text-2xl md:text-4xl xl:text-5xl py-10">
                     Bringing our mission to life
                 </div>
+                <FloatingWhatsApp phoneNumber="+918088113599" accountName="Tridala Pharma" />
                 {/* Grid container */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 xl:gap-8 px-4 py-6 md:p-10 xl:p-20">
                     {images.map((img, index) => (

@@ -2,14 +2,14 @@
 import { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import image1 from "./../../assets/homeProducts/img1.svg"
-import img2 from "./../../assets/homeProducts/img2B.png"
+import img2 from "./../../assets/homeProducts/img2.png"
 import image3 from "./../../assets/homeProducts/img3.svg"
 import imag from "./../../assets/homeProducts/img.png"
 import imagt from "./../../assets/homeProducts/triagel.png"
 import image5 from "./../../assets/homeProducts/img5.svg"
-import roar from "./../../assets/homeProducts/roar.png"
-import image9 from "./../../assets/homeProducts/img9.svg"
-import image10 from "./../../assets/homeProducts/img10.png"
+import roar from "./../../assets/homeProducts/roarvit.png"
+import image9 from "./../../assets/homeProducts/img9.png"
+import image10 from "./../../assets/homeProducts/trilus.png"
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 

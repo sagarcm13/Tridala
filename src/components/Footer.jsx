@@ -96,7 +96,7 @@ const Address = () => {
           <a href="mailto:order@tridalapharma.com" className="block mb-2">For order: order@tridalapharma.com</a>
           <a href="mailto:hr@tridalapharma.com" className="block mb-2">Job application: hr@tridalapharma.com</a>
           <a href="mailto:info@tridalapharma.com" className="block mb-2">Any quires: info@tridalapharma.com</a>
-          <a href="tel:+91808813599">WhatsApp: +91 80881 13599</a>
+          <a href="//api.whatsapp.com/send?phone=918088113599" target='_blank' >WhatsApp: +91 80881 13599</a>
         </div>
       </div>
     </>

@@ -5,8 +5,9 @@ import leaves from './../../assets/healthTips/leaves.svg';
 import apple from './../../assets/healthTips/apple.png';
 import exercise from './../../assets/healthTips/exercise.png';
 import poster1 from './../../assets/TridalaBanners/HealthTips1.svg';
-import poster2 from './../../assets/TridalaBanners/HealthTips2.svg';
+import poster2 from './../../assets/TridalaBanners/HealthTips2.png';
 import BannerCarousel from '../../components/BannerCarousel.jsx';
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 export default function HealthTips() {
   const [index, setIndex] = useState(new Date().getDate());
   const [isFruit, setIsFruit] = useState(true);
@@ -79,6 +80,7 @@ export default function HealthTips() {
       <div className='bg-[#E1EFF5]'>
         <BannerCarousel images={images} />
       </div>
+      <FloatingWhatsApp phoneNumber="+918088113599" accountName="Tridala Pharma" />
       <div className="font-lato bg-[#E1EFF5] p-8 xl:p-16">
         <div className='bg-[#E1EFF5]  flex-col items-center justify-between xl:mx-40 my-10 space-y-4 md:space-y-0' ref={divRef}>
           <div className='flex flex-col md:flex-row items-center justify-between my-10 space-y-4 md:space-y-0'>
