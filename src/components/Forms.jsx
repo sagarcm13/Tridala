@@ -33,8 +33,7 @@ export default function Forms() {
                     "Content-Type": "text/plain;charset=utf-8",
                 },
             });
-            console.log(response);
-            if (response.data.status === "success") {
+            if (response.status === 200) {
                 setStatus("Form submitted successfully!");
                 setFormData({ name: "", email: "", phone: "", content: "" });
             } else {
