@@ -109,7 +109,7 @@ const SocialMedia = () => {
         <a href="https://x.com/tridala_pharma" target='_blank' className="text-white hover:text-gray-200"><i className="fab fa-x-twitter"></i></a>
         <a href="https://www.instagram.com/tridala_pharmaceuticals" target='_blank' className="text-white hover:text-gray-200"><i className="fab fa-instagram"></i></a>
         <a href="https://www.facebook.com/profile.php?id=61568375807483" target='_blank' className="text-white hover:text-gray-200"><i className="fab fa-facebook"></i></a>
-        <a href=" www.linkedin.com/in/tridala-pharma" target='_blank' className="text-white hover:text-gray-200"><i className="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/tridala-pharma" target='_blank' className="text-white hover:text-gray-200"><i className="fab fa-linkedin"></i></a>
       </div>
     </>
   );
