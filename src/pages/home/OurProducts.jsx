@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import image1 from "./../../assets/homeProducts/img1.svg"
-import img2 from "./../../assets/homeProducts/img2.png"
+import img2 from "./../../assets/homeProducts/img2b.png"
 import image3 from "./../../assets/homeProducts/img3.svg"
 import imag from "./../../assets/homeProducts/img.png"
 import imagt from "./../../assets/homeProducts/triagel.png"

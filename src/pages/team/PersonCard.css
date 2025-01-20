@@ -55,7 +55,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px 10px;
+    padding: 20px 20px;
 }
 
 .back-content .description {
@@ -63,7 +63,7 @@
     font-size: 12px;
     text-align: justify;
     /* Default text size */
-    line-height: 1;
+    line-height: 1.5;
 }
 
 /* Social links styling */

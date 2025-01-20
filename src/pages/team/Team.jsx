@@ -29,7 +29,7 @@ export default function Team() {
     },
     {
       img: hrf,
-      description: "Monika oversees HR and Finance, driving key operations that contribute significantly to Tridala's growth ans success",
+      description: "Monika oversees HR and Finance, driving key operations that contribute significantly to Tridala's growth and success",
       x: "https://twitter.com",
       instagram: "https://instagram.com",
       facebook: "https://facebook.com",
@@ -95,7 +95,7 @@ export default function Team() {
     },
     {
       img: surgeon,
-      name: "DR. ARUO NAYAK",
+      name: "DR. Arun Nayak",
       role: "GENERAL SURGEON",
       description: "Dr. Arun Nayak joined the advisory board to guide Tridala in delivering surgical-grade medicines, driven by his passion for accessible high-quality healthcare.",
       x: "https://twitter.com",
@@ -150,14 +150,14 @@ export default function Team() {
             {advisoryTeam.map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-col bg-[#3DAAA5E3] rounded-3xl w-52 md:w-52 xl:w-80 h-[450px] md:h-[500px] xl:h-[650px] mx-2 ${index === 0 ? 'mt-0' : 'mt-2'
+                className={`flex flex-col bg-[#3DAAA5E3] rounded-3xl w-52 md:w-52 xl:w-80 h-[460px] md:h-[500px] xl:h-[650px] mx-2 ${index === 0 ? 'mt-0' : 'mt-2'
                   }`}
               >
                 <img src={item.img} className='h-52 md:h-64 xl:h-[350px]' alt="" />
-                <div className='text-white font-bold mt-2 md:text-xl xl:text-2xl'>{item.name}</div>
+                <div className='text-white font-semibold mt-2 md:text-xl xl:text-2xl'>{item.name}</div>
                 <div className='mt-2 md:text-sm xl:text-lg'>{item.role}</div>
                 <div className='md:h-44 xl:h-48'>
-                  <div className='text-justify text-sm md:text-l xl:text-xl text-white p-2'>{item.description}</div>
+                  <div className='text-justify text-sm md:text-l xl:text-xl text-white p-3 md:px-3 xl:px-5'>{item.description}</div>
                 </div>
                 {/* <div className=" flex justify-center space-x-6 xl:space-x-8 pb-2  md:text-xl xl:text-2xl">
                   <a href={item.x} className="text-white hover:text-gray-200"><i className="fab fa-x-twitter"></i></a>
