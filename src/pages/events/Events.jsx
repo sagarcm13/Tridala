@@ -9,13 +9,13 @@ import img11 from './../../assets/Website/img11.JPG';
 import img12 from './../../assets/Website/img12.JPG';
 import img13 from './../../assets/Website/img13.jpg';
 import img15 from './../../assets/Website/img15.JPG';
-import img16 from './../../assets/Website/img16.png';
+import img20 from './../../assets/Website/img20.JPG';
 import TridalaEvent from './../../assets/Website/TridalaEvent.mp4'
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
 
 export default function Events() {
-    const images = [img4, img2, img6, img8, img9, img11, img12, img13, img15, img1, img16, img3];
+    const images = [img4, img2, img6, img8, img9, img11, img12, img13, img15, img1, img20, img3];
     return (
         <>
             <div className="bg-[#189D90] text-center font-lato">
@@ -28,7 +28,7 @@ export default function Events() {
                     {images.map((img, index) => (
                         <div key={index} className="w-full">
                             <img
-                                className="w-full h-48 md:h-64 xl:h-72 object-fill rounded-xl"
+                                className={`w-full h-48 md:h-64 xl:h-72 rounded-xl ${img===img20? `object-cover`:`object-fill`}`}
                                 src={img}
                                 alt={`Image ${index + 1}`}
                             />

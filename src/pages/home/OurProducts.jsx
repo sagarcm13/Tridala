@@ -4,10 +4,10 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import image1 from "./../../assets/homeProducts/img1.svg"
 import img2 from "./../../assets/homeProducts/img2b.png"
 import image3 from "./../../assets/homeProducts/img3.svg"
-import imag from "./../../assets/homeProducts/img.png"
+import imag from "./../../assets/homeProducts/6.png"
 import imagt from "./../../assets/homeProducts/triagel.png"
 import image5 from "./../../assets/homeProducts/img5.svg"
-import roar from "./../../assets/homeProducts/roarvit.png"
+import roar from "./../../assets/homeProducts/8.png"
 import image9 from "./../../assets/homeProducts/img9.png"
 import image10 from "./../../assets/homeProducts/trilus.png"
 import { useNavigate } from "react-router-dom";

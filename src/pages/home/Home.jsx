@@ -42,7 +42,7 @@ const Home = () => {
                             <div className='text-[#25988B] text-4xl md:text-5xl xl:text-7xl font-extrabold'>OUR</div>
                             <div className='text-[#25988B] text-4xl md:text-5xl xl:text-7xl font-extrabold'>JOURNEY</div>
                         </div>
-                        <div className='font-extrabold'>Since <span className='text-[#25988B]'>2024</span></div>
+                        {/* <div className='font-extrabold'>Since <span className='text-[#25988B]'>2024</span></div> */}
                     </div>
                     <div className='text-[#25988B]  mx-10 my-5 xl:text-2xl text-justify'>
                         Tridala Pharmaceuticals has been dedicated to improving global health through innovative pharmaceutical solutions. From breakthrough treatments to a commitment to sustainability
@@ -64,9 +64,9 @@ const Home = () => {
                         </div>
                     </div>
                     <div className='md:p-5 md:w-[50%] flex items-end flex-col m-5 xl:m-10'>
-                        <div className='flex justify-end mt-5'>
+                        {/* <div className='flex justify-end mt-5'>
                             <div className='md:text-2xl xl:text-4xl font-bold'>Since <span className='text-[#25988B]'>2024</span></div>
-                        </div>
+                        </div> */}
                         <img src={tablets} className='h-84 xl:h-[550px] hidden md:block' alt="Medicine image" />
                     </div>
                 </div>

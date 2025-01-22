@@ -49,12 +49,12 @@ const OurStory = () => {
                     </div>
                 </div>
             </div>
-            <div className="my-8 md:my-20 flex flex-col justify-center items-center space-y-4">
-                <img src={image1} alt="Story 1" className="w-40 h-40 md:w-48 md:h-48 xl:w-56 xl:h-56 p-2" />
-                <img src={image2} alt="Story 2" className="w-40 h-40 md:w-48 md:h-48 xl:w-56 xl:h-56 p-2" />
-                <img src={image3} alt="Story 3" className="w-40 h-40 md:w-48 md:h-48 xl:w-56 xl:h-56 p-2" />
-                <img src={image4} alt="Story 4" className="w-40 h-40 md:w-48 md:h-48 xl:w-56 xl:h-56 p-2" />
-                <img src={image5} alt="Story 5" className="w-40 h-40 md:w-48 md:h-48 xl:w-56 xl:h-56 p-2" />
+            <div className="my-8 md:my-20 flex flex-col justify-center items-center space-y-2 md:space-y-10">
+                <img src={image1} alt="Story 1" className="w-40 h-40 md:w-48 md:h-48 xl:w-56 xl:h-56 p-2 transform md:rotate-[20deg]" />
+                <img src={image2} alt="Story 2" className="w-40 h-40 md:w-48 md:h-48 xl:w-56 xl:h-56 p-2 transform md:rotate-[-20deg]" />
+                <img src={image3} alt="Story 3" className="w-40 h-40 md:w-48 md:h-48 xl:w-56 xl:h-56 p-2 transform md:rotate-[10deg]" />
+                <img src={image4} alt="Story 4" className="w-40 h-40 md:w-48 md:h-48 xl:w-56 xl:h-56 p-2 transform md:rotate-[-10deg]" />
+                <img src={image5} alt="Story 5" className="w-40 h-40 md:w-48 md:h-48 xl:w-56 xl:h-56 p-2 transform md:rotate-[20deg]" />
             </div>
         </div>
     );
