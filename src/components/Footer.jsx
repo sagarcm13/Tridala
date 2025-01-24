@@ -9,7 +9,11 @@ const Footer = () => {
         <FormHelper />
         <Address />
         <div className='border-t-2 border-b-2 pb-4'>
-          <SocialMedia />
+          <div className='flex flex-col items-center justify-around space-y-3 mt-3'>
+            <div>© 2025 Tridala Pharmaceuticals Pvt. Ltd.</div>
+            <a href='http://devcreationsblr.com/' target='_blank'>Powered by Dev Creations and Solutions</a>
+            <SocialMedia />
+          </div>
         </div>
         <div className='flex justify-around'>
           <Company />
@@ -23,7 +27,11 @@ const Footer = () => {
         <FormHelper />
       </div>
       <div className='hidden md:block'>
-        <SocialMedia />
+        <div className='flex flex-col md:flex-row items-center justify-around mt-5'>
+          <div>© 2025 Tridala Pharmaceuticals Pvt. Ltd.</div>
+          <a href='http://devcreationsblr.com/' target='_blank'>Powered by Dev Creations and Solutions</a>
+          <SocialMedia />
+        </div>
       </div>
     </footer>
   );
@@ -105,7 +113,7 @@ const Address = () => {
 const SocialMedia = () => {
   return (
     <>
-      <div className="flex justify-center md:justify-end text-2xl md:text-3xl space-x-10 mt-5 md:mt-8 md:mx-28 xl:mx-40">
+      <div className="flex text-2xl md:text-3xl space-x-10">
         <a href="https://x.com/tridala_pharma" target='_blank' className="text-white hover:text-gray-200"><i className="fab fa-x-twitter"></i></a>
         <a href="https://www.instagram.com/tridala_pharmaceuticals" target='_blank' className="text-white hover:text-gray-200"><i className="fab fa-instagram"></i></a>
         <a href="https://www.facebook.com/profile.php?id=61568375807483" target='_blank' className="text-white hover:text-gray-200"><i className="fab fa-facebook"></i></a>

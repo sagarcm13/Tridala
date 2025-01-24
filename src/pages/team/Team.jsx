@@ -13,11 +13,12 @@ import BannerCarousel from '../../components/BannerCarousel.jsx';
 import Journey1 from './../../assets/TridalaBanners/Journey1.svg';
 import Journey2 from './../../assets/TridalaBanners/Journey2.svg';
 import Journey3 from './../../assets/TridalaBanners/Journey3.svg';
+import Journey4 from './../../assets/TridalaBanners/Journey4.svg';
 import PersonCard from './PersonCard';
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
 export default function Team() {
-  const images = [Journey2, Journey1, Journey3];
+  const images = [Journey2, Journey1, Journey3, Journey4];
   const personsRow1 = [
     {
       img: chairperson,
@@ -155,9 +156,9 @@ export default function Team() {
               >
                 <img src={item.img} className='h-52 md:h-64 xl:h-[350px]' alt="" />
                 <div className='text-white font-semibold mt-2 md:text-xl xl:text-2xl'>{item.name}</div>
-                <div className='mt-2 md:text-sm xl:text-lg'>{item.role}</div>
+                <div className='mt-2 md:text-sm xl:text-normal'>{item.role}</div>
                 <div className='md:h-44 xl:h-48'>
-                  <div className='text-justify text-sm md:text-l xl:text-xl text-white p-3 md:px-3 xl:px-5'>{item.description}</div>
+                  <div className='text-justify text-sm md:text-normal xl:text-lg text-white p-3 md:px-3 xl:px-5'>{item.description}</div>
                 </div>
                 {/* <div className=" flex justify-center space-x-6 xl:space-x-8 pb-2  md:text-xl xl:text-2xl">
                   <a href={item.x} className="text-white hover:text-gray-200"><i className="fab fa-x-twitter"></i></a>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import BannerCarousel from '../../components/BannerCarousel.jsx';
 import product1 from './../../assets/TridalaBanners/Products1.svg';
 import product2 from './../../assets/TridalaBanners/Products2.svg';
+import product3 from './../../assets/TridalaBanners/Products3.svg';
 import img3 from './../../assets/productsPoster/3.svg';
 import img4 from './../../assets/productsPoster/4.svg';
 import img5 from './../../assets/productsPoster/5.svg';
@@ -14,7 +15,7 @@ import img11 from './../../assets/productsPoster/11.svg';
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
 export default function Products() {
-  const images = [product1, product2];
+  const images = [product1, product2, product3];
   const [products, setProducts] = useState([
     {
       name: "OSELTRA 75",

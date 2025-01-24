@@ -9,7 +9,7 @@ import imagt from "./../../assets/homeProducts/triagel.png"
 import image5 from "./../../assets/homeProducts/img5.svg"
 import roar from "./../../assets/homeProducts/8.png"
 import image9 from "./../../assets/homeProducts/img9.png"
-import image10 from "./../../assets/homeProducts/trilus.png"
+import image10 from "./../../assets/homeProducts/Tritussplus.png"
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 

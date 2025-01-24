@@ -90,7 +90,7 @@
     }
 
     .back-content .description {
-        font-size: 16px;
+        font-size: 15px;
         /* Slightly larger font size on medium screens */
     }
 
@@ -109,7 +109,7 @@
     }
 
     .back-content .description {
-        font-size: 20px;
+        font-size: 18px;
         /* Larger text size on larger screens */
     }
 

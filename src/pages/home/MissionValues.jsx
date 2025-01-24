@@ -61,7 +61,7 @@ const MissionValues = () => {
           <div key={index} className="bg-white rounded-3xl shadow-xl p-4 flex flex-col items-center text-center md:space-y-4 w-64">
             <img src={value.icon} alt={value.title} className="h-8 w-8" />
             <h3 className="text-xl font-semibold text-[#218275]">{value.title}</h3>
-            <p className="text-[#2B8A6D] text-justify">{value.description}</p>
+            <p className="text-[#2B8A6D] text-center">{value.description}</p>
           </div>
         ))}
       </div>
@@ -70,7 +70,7 @@ const MissionValues = () => {
           <div key={index} className="bg-white rounded-3xl shadow-xl p-4 flex flex-col items-center text-center md:space-y-4 w-64">
             <img src={value.icon} alt={value.title} className="h-8 w-8" />
             <h3 className="text-xl font-semibold text-[#218275]">{value.title}</h3>
-            <p className="text-[#2B8A6D]  text-justify">{value.description}</p>
+            <p className="text-[#2B8A6D]  text-center">{value.description}</p>
           </div>
         ))}
       </div>
@@ -79,7 +79,7 @@ const MissionValues = () => {
           <div key={index} className="bg-white rounded-3xl shadow-xl p-6 xl:p-9 flex flex-col items-center text-center md:space-y-4 w-64 h-64 xl:w-72 xl:h-72">
             <img src={value.icon} alt={value.title} className="h-8 w-8 xl:h-10 xl:w-12" />
             <h3 className="text-xl xl:text-2xl font-semibold text-[#218275]">{value.title}</h3>
-            <p className="text-lg text-semibold leading-none text-[#2B8A6D]  text-justify">{value.description}</p>
+            <p className="text-base text-semibold leading-[1.15] text-[#2B8A6D]  text-center">{value.description}</p>
           </div>
         ))}
       </div>
@@ -88,7 +88,7 @@ const MissionValues = () => {
           <div key={index} className="bg-white rounded-3xl shadow-xl p-6 xl:p-9 flex flex-col items-center text-center md:space-y-4 w-64 h-64 xl:w-72 xl:h-72">
             <img src={value.icon} alt={value.title} className="h-8 w-8 xl:h-8 xl:w-12" />
             <h3 className="text-xl xl:text-2xl font-semibold text-[#218275]">{value.title}</h3>
-            <p className="text-lg text-semibold leading-none text-[#2B8A6D] text-justify">{value.description}</p>
+            <p className="text-base text-semibold leading-[1.15] text-[#2B8A6D] text-center">{value.description}</p>
           </div>
         ))}
       </div>

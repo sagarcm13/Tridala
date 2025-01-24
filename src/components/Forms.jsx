@@ -2,7 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 
 export default function Forms() {
-    // State for storing form data
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -20,7 +19,7 @@ export default function Forms() {
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const scriptURL = import.meta.env.VITE_SCRIPT_URL;
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwqZycR8FIA_t11SKcGoXkzDQ3xywM13OuuEllCPELWGJMd6dv0cA-CdR5krl03fw3wmA/exec";
         if (!scriptURL) {
             setStatus("Error: Script URL is not configured in the environment.");
             return;
@@ -39,7 +38,6 @@ export default function Forms() {
                 setStatus("Failed to submit the form. Please try again.");
             }
         } catch (error) {
-            console.error("Error:", error);
             setStatus("An error occurred while submitting the form.");
         } finally {
             setIsSubmitting(false); // Stop loading state

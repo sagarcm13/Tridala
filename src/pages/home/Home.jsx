@@ -1,16 +1,17 @@
 import poster1 from './../../assets/TridalaBanners/Home1.svg';
 import poster2 from './../../assets/TridalaBanners/Home2.svg';
+import poster3 from './../../assets/TridalaBanners/Home3.svg';
 import homePageVideo from './../../assets/homePageVideo.mp4';
 import MissionValues from './MissionValues.jsx';
 import OurProducts from './OurProducts.jsx';
 import { useNavigate } from "react-router-dom";
-import tablets from "./../../assets/tablets.png"
+import tablets from "./../../assets/tablet.png"
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import BannerCarousel from '../../components/BannerCarousel.jsx';
 
 const Home = () => {
     let navigate = useNavigate();
-    const images = [poster1, poster2];
+    const images = [poster1, poster2, poster3];
     return (
         <>
             <div className="font-lato w-full xl:h-[calc(100vh-80px)] bg-slate-200 flex flex-col justify-center text-center relative">
@@ -37,7 +38,7 @@ const Home = () => {
                 <MissionValues />
 
                 <div className='md:hidden'>
-                    <div className='flex m-5 justify-around'>
+                    <div className='flex m-5 mx-10 md:mx-0'>
                         <div className='flex flex-col justify-start text-start'>
                             <div className='text-[#25988B] text-4xl md:text-5xl xl:text-7xl font-extrabold'>OUR</div>
                             <div className='text-[#25988B] text-4xl md:text-5xl xl:text-7xl font-extrabold'>JOURNEY</div>
@@ -67,7 +68,7 @@ const Home = () => {
                         {/* <div className='flex justify-end mt-5'>
                             <div className='md:text-2xl xl:text-4xl font-bold'>Since <span className='text-[#25988B]'>2024</span></div>
                         </div> */}
-                        <img src={tablets} className='h-84 xl:h-[550px] hidden md:block' alt="Medicine image" />
+                        <img src={tablets} className='h-72 xl:h-[550px] w-fit hidden md:block' alt="Medicine image" />
                     </div>
                 </div>
             </div>

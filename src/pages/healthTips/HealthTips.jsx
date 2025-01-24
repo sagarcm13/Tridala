@@ -6,6 +6,7 @@ import apple from './../../assets/healthTips/apple.png';
 import exercise from './../../assets/healthTips/exercise.png';
 import poster1 from './../../assets/TridalaBanners/HealthTips1.svg';
 import poster2 from './../../assets/TridalaBanners/HealthTips2.png';
+import poster3 from './../../assets/TridalaBanners/HealthTips3.svg';
 import BannerCarousel from '../../components/BannerCarousel.jsx';
 import { FloatingWhatsApp } from 'react-floating-whatsapp'
 export default function HealthTips() {
@@ -14,7 +15,7 @@ export default function HealthTips() {
   const [boxContent, setBoxContent] = useState("");
   const divRef = useRef(null);
   const [Width, setWidth] = useState(0);
-  const images = [poster1, poster2];
+  const images = [poster1, poster2, poster3];
 
   useEffect(() => {
     if (divRef.current) {
