@@ -19,7 +19,7 @@ export default function Purpose() {
       <FloatingWhatsApp phoneNumber="+918088113599" accountName="Tridala Pharma" />
       <OurStory />
       <Ladder />
-      <div className='font-lato flex flex-col text-center pt-5 bg-slate-200 items-center '>
+      <div className='font-lato flex flex-col text-center pt-5 bg-slate-200 items-center pb-10 md:pb-20 xl:pb-40'>
         <div className='flex justify-center items-center py-10 xl:py-16 space-x-3'>
           <img src={left} className='h-10 md:h-12 xl:h-16' alt="" />
           <div className='text-2xl md:text-3xl xl:text-5xl font-bold text-[#329284] my-4'>MISSION & VALUES</div>

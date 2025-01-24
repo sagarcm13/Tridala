@@ -48,7 +48,7 @@ export default function Team() {
   const personsRow2 = [
     {
       img: ceo,
-      description: "Graduated from Bangalore Medical College and then completed M.D in pediatrics at one of the top most institute of post graduate education and training centre in India. Worked at St. Martha's Hospital, Bangalore consultant pediatrician for 5 years.",
+      description: "Graduated from Bangalore Medical College and then completed M.D in pediatrics at one of the top most institute of post graduate education and training centre in India.",
       x: "https://twitter.com",
       instagram: "https://instagram.com",
       facebook: "https://facebook.com",
@@ -151,14 +151,14 @@ export default function Team() {
             {advisoryTeam.map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-col bg-[#3DAAA5E3] rounded-3xl w-52 md:w-52 xl:w-80 h-[460px] md:h-[500px] xl:h-[650px] mx-2 ${index === 0 ? 'mt-0' : 'mt-2'
+                className={`flex flex-col bg-[#3DAAA5E3] rounded-3xl w-52 md:w-52 xl:w-80 h-[460px] md:h-[500px] xl:h-[620px] mx-2 ${index === 0 ? 'mt-0' : 'mt-2'
                   }`}
               >
                 <img src={item.img} className='h-52 md:h-64 xl:h-[350px]' alt="" />
                 <div className='text-white font-semibold mt-2 md:text-xl xl:text-2xl'>{item.name}</div>
                 <div className='mt-2 md:text-sm xl:text-normal'>{item.role}</div>
                 <div className='md:h-44 xl:h-48'>
-                  <div className='text-justify text-sm md:text-normal xl:text-lg text-white p-3 md:px-3 xl:px-5'>{item.description}</div>
+                  <div className='text-center text-sm md:text-normal xl:text-lg text-white p-3 md:px-3 xl:px-5'>{item.description}</div>
                 </div>
                 {/* <div className=" flex justify-center space-x-6 xl:space-x-8 pb-2  md:text-xl xl:text-2xl">
                   <a href={item.x} className="text-white hover:text-gray-200"><i className="fab fa-x-twitter"></i></a>

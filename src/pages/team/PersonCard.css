@@ -104,7 +104,7 @@
     .card-container {
         width: 300px;
         /* Tailwind w-auto becomes a fixed size at xl breakpoint */
-        height: 350px;
+        height: 330px;
         /* Tailwind xl:h-[350px] (350px) */
     }
 

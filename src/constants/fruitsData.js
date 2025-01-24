@@ -241,7 +241,7 @@ export const fruitsData = [
     },
     {
         name: "Rambutan",
-        img: "https://www.shutterstock.com/image-photo/rambutan-isolated-on-white-clipping-260nw-1175756485.jpg",
+        img: "https://homegrown.in/upload/product/big1193470275.jpg",
         nutritionalValues: {
             weight: "5 fruits, 100g",
             calories: 68,
