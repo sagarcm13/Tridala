@@ -1,6 +1,7 @@
 import poster1 from './../../assets/TridalaBanners/Home1.svg';
 import poster2 from './../../assets/TridalaBanners/Home2.svg';
 import poster3 from './../../assets/TridalaBanners/Home3.svg';
+import poster0 from './../../assets/TridalaBanners/republic.svg';
 import homePageVideo from './../../assets/homePageVideo.mp4';
 import MissionValues from './MissionValues.jsx';
 import OurProducts from './OurProducts.jsx';
@@ -11,7 +12,7 @@ import BannerCarousel from '../../components/BannerCarousel.jsx';
 
 const Home = () => {
     let navigate = useNavigate();
-    const images = [poster1, poster2, poster3];
+    const images = [poster0, poster1, poster2, poster3];
     return (
         <>
             <div className="font-lato w-full xl:h-[calc(100vh-80px)] bg-slate-200 flex flex-col justify-center text-center relative">
